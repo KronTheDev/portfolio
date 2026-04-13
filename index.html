@@ -16,7 +16,7 @@
   <nav class="topbar" role="navigation" aria-label="Main navigation">
     <div class="nav-content">
       <span class="brand">KRONTHEDEV</span>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="#hero">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -24,7 +24,12 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
-      <a href="cv.html" class="cv-btn" id="cvDownload">↓ CV</a>
+      <div class="nav-right">
+        <a href="cv.html" class="cv-btn" id="cvDownload">↓ CV</a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 

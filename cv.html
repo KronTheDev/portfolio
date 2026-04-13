@@ -154,6 +154,19 @@
     .cv-lang-row span strong { color: #bbb; }
 
     /* ──────────────────────────────────────────── */
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .cv-page { padding: 4.5rem 1.25rem 3rem; }
+      .cv-name { font-size: 1.4rem; }
+      .cv-skills-grid { grid-template-columns: 1fr; }
+      .cv-exp-header { flex-direction: column; gap: 0.1rem; }
+      .cv-edu-line { flex-direction: column; gap: 0.05rem; }
+      .cv-contact { gap: 0.2rem 1rem; }
+      .print-bar { padding: 0 1rem; }
+      .print-bar-label { display: none; }
+    }
+
+    /* ──────────────────────────────────────────── */
     /* ── PRINT STYLES ── */
     @media print {
       @page { size: A4; margin: 16mm 18mm; }

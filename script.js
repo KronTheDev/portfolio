@@ -138,12 +138,12 @@ const nameB = 'Kron';
 
 async function glitchName() {
   while (true) {
-    await new Promise(r => setTimeout(r, 1000));
+    await new Promise(r => setTimeout(r, 2500));
     glitchEl.classList.add('glitching');
     await new Promise(r => setTimeout(r, 120));
     glitchEl.classList.remove('glitching');
     glitchEl.textContent = nameB;
-    await new Promise(r => setTimeout(r, 1000));
+    await new Promise(r => setTimeout(r, 2500));
     glitchEl.classList.add('glitching');
     await new Promise(r => setTimeout(r, 120));
     glitchEl.classList.remove('glitching');

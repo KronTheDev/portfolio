@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Andriyan Pyrig (Andrew Pie)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Screen base ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 15px; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0e0e0e;
+      color: #d8d8d8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Print button (screen only) ── */
+    .print-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 52px;
+      background: rgba(14,14,14,0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      z-index: 100;
+    }
+    .print-bar-label {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: #555;
+    }
+    .print-bar-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .btn-back {
+      font-size: 0.82rem;
+      color: #888;
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .btn-back:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
+    .btn-print {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+      background: #6675ff;
+      border: none;
+      padding: 7px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .btn-print:hover { opacity: 0.85; }
+
+    /* ── CV page wrapper ── */
+    .cv-page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 5rem 3rem 4rem;
+    }
+
+    /* ── Header ── */
+    .cv-header { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1.25rem; margin-bottom: 1.5rem; }
+    .cv-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .cv-alias {
+      font-size: 0.82rem;
+      color: #666;
+      margin-top: 0.2rem;
+      letter-spacing: 0.5px;
+    }
+    .cv-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.5rem;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+    .cv-contact a { color: #8891ff; text-decoration: none; }
+    .cv-contact a:hover { text-decoration: underline; }
+
+    /* ── Sections ── */
+    .cv-section { margin-bottom: 1.75rem; }
+    .cv-section-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #6675ff;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid rgba(102,117,255,0.15);
+    }
+
+    /* ── Education / Internship ── */
+    .cv-edu-item { margin-bottom: 0.5rem; }
+    .cv-edu-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .cv-edu-name { font-size: 0.88rem; font-weight: 600; color: #ddd; }
+    .cv-edu-date { font-size: 0.78rem; color: #555; flex-shrink: 0; }
+    .cv-edu-sub { font-size: 0.8rem; color: #666; margin-top: 0.1rem; }
+
+    /* ── Experience ── */
+    .cv-exp-item { margin-bottom: 1.1rem; }
+    .cv-exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.15rem;
+    }
+    .cv-exp-role { font-size: 0.9rem; font-weight: 600; color: #ddd; }
+    .cv-exp-date { font-size: 0.77rem; color: #6675ff; flex-shrink: 0; font-weight: 600; }
+    .cv-exp-org { font-size: 0.78rem; color: #666; margin-bottom: 0.3rem; }
+    .cv-exp-body { font-size: 0.82rem; color: #888; line-height: 1.65; }
+
+    .cv-exp-item.cv-writing {
+      margin-left: 1rem;
+      padding-left: 0.75rem;
+      border-left: 1px dashed rgba(255,255,255,0.08);
+      opacity: 0.82;
+    }
+    .cv-exp-item.cv-writing .cv-exp-date { color: #555; }
+
+    /* ── Skills ── */
+    .cv-skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem 2rem;
+    }
+    .cv-skill-row { font-size: 0.82rem; color: #999; }
+    .cv-skill-row strong { color: #bbb; font-weight: 600; }
+
+    /* ── Languages ── */
+    .cv-lang-row { display: flex; flex-wrap: wrap; gap: 0.3rem 1.5rem; font-size: 0.82rem; color: #888; }
+    .cv-lang-row span strong { color: #bbb; }
+
+    /* ──────────────────────────────────────────── */
+    /* ── PRINT STYLES ── */
+    @media print {
+      @page { size: A4; margin: 16mm 18mm; }
+
+      body {
+        background: #fff !important;
+        color: #1a1a1a !important;
+        font-size: 11pt;
+      }
+
+      .print-bar { display: none !important; }
+
+      .cv-page { padding: 0; max-width: 100%; }
+
+      .cv-name { color: #000 !important; font-size: 22pt; }
+      .cv-alias { color: #555 !important; }
+      .cv-contact { color: #444 !important; }
+      .cv-contact a { color: #3344cc !important; }
+
+      .cv-header { border-bottom-color: #ccc !important; }
+
+      .cv-section-title {
+        color: #3344cc !important;
+        border-bottom-color: #ddd !important;
+      }
+
+      .cv-edu-name { color: #111 !important; }
+      .cv-edu-date { color: #777 !important; }
+      .cv-edu-sub  { color: #666 !important; }
+
+      .cv-exp-role { color: #111 !important; }
+      .cv-exp-date { color: #3344cc !important; }
+      .cv-exp-org  { color: #666 !important; }
+      .cv-exp-body { color: #444 !important; }
+
+      .cv-exp-item.cv-writing {
+        border-left-color: #ddd !important;
+        opacity: 1 !important;
+      }
+      .cv-exp-item.cv-writing .cv-exp-date { color: #777 !important; }
+
+      .cv-skill-row { color: #555 !important; }
+      .cv-skill-row strong { color: #111 !important; }
+
+      .cv-lang-row { color: #555 !important; }
+      .cv-lang-row span strong { color: #111 !important; }
+
+      /* Avoid breaking experience entries across pages */
+      .cv-exp-item { break-inside: avoid; }
+      .cv-section  { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print bar (screen only) -->
+  <div class="print-bar">
+    <span class="print-bar-label">CV Preview</span>
+    <div class="print-bar-actions">
+      <a href="index.html" class="btn-back">← Portfolio</a>
+      <button class="btn-print" onclick="window.print()">↓ Save as PDF</button>
+    </div>
+  </div>
+
+  <div class="cv-page">
+
+    <!-- HEADER -->
+    <header class="cv-header">
+      <div class="cv-name">Andriyan Pyrig</div>
+      <div class="cv-alias">Andrew Pie · KronTheDev</div>
+      <div class="cv-contact">
+        <a href="mailto:kronthedev@gmail.com">kronthedev@gmail.com</a>
+        <a href="https://github.com/KronTheDev" target="_blank">github.com/KronTheDev</a>
+        <span>Discord: @kronbrosgames</span>
+        <span>France / Ukraine</span>
+      </div>
+    </header>
+
+    <!-- EDUCATION -->
+    <section class="cv-section">
+      <div class="cv-section-title">Education</div>
+
+      <div class="cv-edu-item">
+        <div class="cv-edu-line">
+          <span class="cv-edu-name">Lycée Jules Siegfried — Le Havre</span>
+          <span class="cv-edu-date">2023 – 2025</span>
+        </div>
+        <div class="cv-edu-sub">Seconde · Première · Terminale (partial)</div>
+      </div>
+
+      <div class="cv-edu-item">
+        <div class="cv-edu-line">
+          <span class="cv-edu-name">Lycée Rosa Luxemburg — Canet-en-Roussillon</span>
+          <span class="cv-edu-date">2025 – 2026</span>
+        </div>
+        <div class="cv-edu-sub">Terminale</div>
+      </div>
+    </section>
+
+    <!-- INTERNSHIP -->
+    <section class="cv-section">
+      <div class="cv-section-title">Internship</div>
+
+      <div class="cv-edu-item">
+        <div class="cv-edu-line">
+          <span class="cv-edu-name">HAROPA Port — Le Havre, SI Department</span>
+          <span class="cv-edu-date">June 2024</span>
+        </div>
+        <div class="cv-edu-sub">Observation internship within the information systems department of one of Europe's largest port authorities.</div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="cv-section">
+      <div class="cv-section-title">Experience</div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Founder &amp; Lead Developer</span>
+          <span class="cv-exp-date">2026 — Present</span>
+        </div>
+        <div class="cv-exp-org">PsyPunker</div>
+        <div class="cv-exp-body">Sole architect and developer of a USB-bound cryptographic Kernel execution platform. Designed the full system architecture — signing pipeline, sandbox model, drive-identity binding — and built a TypeScript monorepo from scratch using pnpm and Turborepo.</div>
+      </div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">CEO, Owner &amp; Lead Developer</span>
+          <span class="cv-exp-date">2025 — Present (paused)</span>
+        </div>
+        <div class="cv-exp-org">EveryMotion</div>
+        <div class="cv-exp-body">Founded and led an AI-powered motion tracking startup concept targeting AR/VR. Defined the technical vision (computer vision, RAG-enhanced prediction), built the public-facing web presence, and managed the early team and product roadmap.</div>
+      </div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Project Director &amp; Worldbuilding / Narrative Lead</span>
+          <span class="cv-exp-date">2025 — Present</span>
+        </div>
+        <div class="cv-exp-org">KronStudios-Games — Above The Line</div>
+        <div class="cv-exp-body">Co-founded and co-lead a community game studio producing a post-apocalyptic narrative survival RPG in Unreal Engine. Responsible for project direction, narrative design, lore architecture, and team coordination. Established phase-based development workflow, GitHub conventions, and a full Quartz-based GDD wiki.</div>
+      </div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Logistics Manager · Lore Writer · Gameplay Overseer · Translator</span>
+          <span class="cv-exp-date">Apr 2025 — Nov 2025</span>
+        </div>
+        <div class="cv-exp-org">Null Concept — Monochromality (Steam)</div>
+        <div class="cv-exp-body">Cross-functional contributor on a commercially released Backrooms horror game. Introduced lore frameworks from deep study of the Backrooms Wikidot canon. Roles spanned logistics, lore writing, gameplay oversight, partial voice acting, and translation.</div>
+      </div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Co-Founder &amp; Lead Manager</span>
+          <span class="cv-exp-date">Aug 2023 — Feb 2024</span>
+        </div>
+        <div class="cv-exp-org">REIU-V — SCP Roleplay Discord Server</div>
+        <div class="cv-exp-body">Founded and maintained an SCP-themed roleplay community that grew to ~150 members during tenure and accelerated to 900+ after departure. Managed server infrastructure, community moderation, and narrative frameworks.</div>
+      </div>
+
+      <div class="cv-exp-item cv-writing">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Writer</span>
+          <span class="cv-exp-date">~2023 — Present</span>
+        </div>
+        <div class="cv-exp-org">Independent · Backrooms Wikidot · REIU-V · Personal</div>
+        <div class="cv-exp-body">Published Backrooms Wikidot articles (incl. Level 360) and contest entries. In-universe SCP-format technical documents for the REIU-V community. Screenplay and novel work: <em>A Sound Sinner</em> (post-apocalyptic), <em>Information Paradox</em> (literary fiction). Narrative/worldbuilding lead on Above The Line from concept stage.</div>
+      </div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Founder &amp; Lead</span>
+          <span class="cv-exp-date">~2022 — ~2023</span>
+        </div>
+        <div class="cv-exp-org">T||RUTHLESS &amp; Subject To F.U.N — First KronStudios initiatives</div>
+        <div class="cv-exp-body">Founded and directed two UE5 game projects as Project Manager and Head Developer across a team of ~15. Produced full GDDs and chapter-by-chapter storyline addenda. Neither reached a playable build; the foundational leadership experience that structured every subsequent initiative.</div>
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section class="cv-section">
+      <div class="cv-section-title">Technical Skills</div>
+      <div class="cv-skills-grid">
+        <div class="cv-skill-row"><strong>Languages:</strong> TypeScript, JavaScript, Python, C++, C#, SQL, HTML/CSS, UE Blueprint</div>
+        <div class="cv-skill-row"><strong>Engines / Runtimes:</strong> Unreal Engine, Node.js, llama.cpp, HuggingFace Transformers</div>
+        <div class="cv-skill-row"><strong>Tooling:</strong> Git + Git LFS, GitHub Actions, pnpm + Turborepo, Vitest, ESLint, CUDA</div>
+        <div class="cv-skill-row"><strong>Other:</strong> Obsidian, Lore Forge, Blender (basic), Google Docs (scriptwriting)</div>
+      </div>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section class="cv-section">
+      <div class="cv-section-title">Languages</div>
+      <div class="cv-lang-row">
+        <span><strong>Ukrainian</strong> — native</span>
+        <span><strong>French</strong> — fluent</span>
+        <span><strong>English</strong> — fluent</span>
+        <span><strong>Russian</strong> — passive</span>
+        <span><strong>Spanish</strong> — moderate</span>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

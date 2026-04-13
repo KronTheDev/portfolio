@@ -31,14 +31,14 @@
   <!-- HERO -->
   <section id="hero" class="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Hello, I'm</p>
+      <p class="hero-eyebrow">I bid you, Welcome</p>
       <h1 class="hero-name">Andrew Pie</h1>
       <p class="hero-role"><span id="roleType"></span><span class="cursor" aria-hidden="true">|</span></p>
-      <p class="hero-tagline">[One-line tagline — what you build and why it matters.]</p>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View Work</a>
         <a href="#contact" class="btn-ghost">Get in Touch</a>
       </div>
+      <p class="hero-tagline">The future won't come for us. Never. Yet we must strive towards it. Always.</p>
     </div>
   </section>
 
@@ -46,16 +46,28 @@
   <section id="about" class="section-alt">
     <div class="inner two-col">
       <div class="about-photo">
-        <div class="photo-placeholder">[Photo]</div>
+        <img src="assets/about_profile.png" alt="Andrew Pie" class="profile-img">
       </div>
       <div class="about-body">
         <h2>About Me</h2>
-        <p class="muted">[Background paragraph — who you are, what you've built, what drives you technically and creatively.]</p>
-        <p class="muted" style="margin-top:0.75rem">[Second paragraph — current focus, ambitions, anything that makes you distinct.]</p>
+        <p class="muted bio-p1">
+          <span class="bio-hey">"Hey."</span><br>
+          You've seen that opener before. So let's get to it: I'm <span id="glitchName">Andrew</span> — and I build things that probably shouldn't belong in the same portfolio.<br>
+          Code, systems, worlds, and the words that hold them together.<br>
+          I'm Ukrainian and French, fluent across four languages — and passable in a fifth, <em>though I wouldn't recommend it.</em> Somewhere between the text editor and the worlds that don't exist yet, that tends to show up in the work.<br>
+          This portfolio is the longer version.<br>
+          Scroll down to see where that lands.
+        </p>
+        <p class="muted bio-p2">
+          Right now I'm focused on the space where those disciplines actually overlap — where a system needs a story to make sense, or a story needs a system to hold its weight. Most people pick a lane. I've never been particularly good at that.<br>
+          What I'm building toward is work that doesn't need a genre label. Games that read like literature. Narratives that function like architecture. Code that serves something larger than itself, while still having a self. In short, a vague reflection of what I embody.<br>
+          The distinction, if there is one: I don't treat any of these as separate crafts. They inform and <em>interlap</em> each other constantly.<br>
+          Their <em>cross-contamination</em> is usually where the most interesting work comes from, speaking from experience.
+        </p>
         <div class="tag-row" style="margin-top:1.5rem">
-          <span class="tag">[Location]</span>
-          <span class="tag">[Open to: ...]</span>
-          <span class="tag">[Domain focus]</span>
+          <span class="tag">France / Ukraine</span>
+          <span class="tag">Freelance · Internship · Collaboration</span>
+          <span class="tag">Web · Game Dev · AI · Backend</span>
         </div>
       </div>
     </div>
@@ -65,38 +77,66 @@
   <section id="skills" class="section-base">
     <div class="inner">
       <h2>Skills</h2>
-      <p class="section-sub">[What you work with — group by category, not alphabetically.]</p>
+      <p class="section-sub">What I work with — grouped by category.</p>
       <div class="skills-grid">
+
         <div class="skill-group">
-          <h3>[Languages]</h3>
+          <h3>Spoken Languages</h3>
           <div class="pill-row">
-            <span class="pill">[Skill]</span>
-            <span class="pill">[Skill]</span>
-            <span class="pill">[Skill]</span>
+            <span class="pill">Ukrainian — native</span>
+            <span class="pill">French — fluent</span>
+            <span class="pill">English — fluent</span>
+            <span class="pill">Russian</span>
+            <span class="pill">Spanish — moderate</span>
           </div>
         </div>
+
         <div class="skill-group">
-          <h3>[Frameworks / Runtimes]</h3>
+          <h3>Programming Languages</h3>
           <div class="pill-row">
-            <span class="pill">[Skill]</span>
-            <span class="pill">[Skill]</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Python</span>
+            <span class="pill">HTML / CSS</span>
+            <span class="pill">C++</span>
+            <span class="pill">C#</span>
+            <span class="pill">SQL</span>
+            <span class="pill">UE Blueprint</span>
           </div>
         </div>
+
         <div class="skill-group">
-          <h3>[Tools / Infra]</h3>
+          <h3>Frameworks / Runtimes</h3>
           <div class="pill-row">
-            <span class="pill">[Skill]</span>
-            <span class="pill">[Skill]</span>
-            <span class="pill">[Skill]</span>
+            <span class="pill">Unreal Engine</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">HuggingFace Transformers</span>
+            <span class="pill">llama.cpp</span>
           </div>
         </div>
+
         <div class="skill-group">
-          <h3>[Other]</h3>
+          <h3>Tools / Infrastructure</h3>
           <div class="pill-row">
-            <span class="pill">[Skill]</span>
-            <span class="pill">[Skill]</span>
+            <span class="pill">Git + Git LFS</span>
+            <span class="pill">GitHub Actions</span>
+            <span class="pill">pnpm + Turborepo</span>
+            <span class="pill">Vitest</span>
+            <span class="pill">ESLint + commitlint</span>
+            <span class="pill">CUDA</span>
           </div>
         </div>
+
+        <div class="skill-group">
+          <h3>Other</h3>
+          <div class="pill-row">
+            <span class="pill">Blender</span>
+            <span class="pill">Lore Forge</span>
+            <span class="pill">Obsidian</span>
+            <span class="pill">Google Docs</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -105,53 +145,76 @@
   <section id="projects" class="section-alt">
     <div class="inner">
       <h2>Projects</h2>
-      <p class="section-sub">[Will expand automatically as repositories grow. Manual entries welcome.]</p>
+      <p class="section-sub">Selected work — active builds, shipped products, and ongoing initiatives.</p>
       <div class="projects-grid">
 
+        <!-- EveryMotion -->
         <div class="project-card">
           <div class="project-top">
-            <h3>[Project Name]</h3>
-            <span class="status-badge">[Active]</span>
+            <h3>EveryMotion</h3>
+            <span class="status-badge paused">WIP — Paused</span>
           </div>
-          <p>[What it is and why it's interesting. One to two sentences.]</p>
+          <p>An AI-powered, controller-free motion tracking platform for AR/VR. Removes the barrier between user and virtual world — no sensors, no controllers — using computer vision and RAG-enhanced predictive modelling.</p>
           <div class="pill-row sm">
-            <span class="pill">[Tech]</span>
-            <span class="pill">[Tech]</span>
+            <span class="pill">HTML / CSS / JS</span>
+            <span class="pill">Computer Vision</span>
+            <span class="pill">RAG / AI</span>
           </div>
           <div class="project-links">
-            <a href="#">GitHub ↗</a>
-            <a href="#">Live ↗</a>
+            <a href="https://github.com/KronTheDev/everymotion.github.io" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://kronthedev.github.io/everymotion.github.io/" target="_blank" rel="noopener">Live ↗</a>
           </div>
         </div>
 
+        <!-- PsyPunker -->
         <div class="project-card">
           <div class="project-top">
-            <h3>[Project Name]</h3>
-            <span class="status-badge">[WIP]</span>
+            <h3>PsyPunker</h3>
+            <span class="status-badge">Active — WIP</span>
           </div>
-          <p>[What it is and why it's interesting. One to two sentences.]</p>
+          <p>A dual-mode desktop platform for authoring, signing, and executing USB-bound Kernel bundles — sandboxed experiences cryptographically tied to the physical drive. When the drive leaves, the session ends. Zero trace on the host.</p>
           <div class="pill-row sm">
-            <span class="pill">[Tech]</span>
-            <span class="pill">[Tech]</span>
-            <span class="pill">[Tech]</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">Ed25519 + Argon2id</span>
+            <span class="pill">Turborepo</span>
           </div>
           <div class="project-links">
-            <a href="#">GitHub ↗</a>
+            <a href="https://github.com/KronTheDev/psypunker" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
         </div>
 
+        <!-- Above The Line -->
         <div class="project-card">
           <div class="project-top">
-            <h3>[Project Name]</h3>
-            <span class="status-badge">[Shipped]</span>
+            <h3>Above The Line</h3>
+            <span class="status-badge">Active — WIP</span>
           </div>
-          <p>[What it is and why it's interesting. One to two sentences.]</p>
+          <p>A post-apocalyptic narrative survival RPG set after the Yellowstone supereruption reshapes Vancouver's atmosphere in 2039. Society splits by elevation. The player leaves the fragile safety of a high-rise and travels upward. Project Director & Narrative Lead under KronStudios-Games.</p>
           <div class="pill-row sm">
-            <span class="pill">[Tech]</span>
+            <span class="pill">Unreal Engine</span>
+            <span class="pill">C++ / Blueprint</span>
+            <span class="pill">Git LFS</span>
+            <span class="pill">Quartz</span>
           </div>
           <div class="project-links">
-            <a href="#">GitHub ↗</a>
-            <a href="#">Live ↗</a>
+            <a href="https://github.com/KronStudios-Games/abovetheline" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- Monochromality -->
+        <div class="project-card">
+          <div class="project-top">
+            <h3>Monochromality</h3>
+            <span class="status-badge">Active — WIP</span>
+          </div>
+          <p>A Backrooms-inspired first-person horror game by Null Concept. 15 mapped levels at initial release, each with unique hazards and audio ambiance, alongside three distinct entity types — the Howler, the Hounds, and the Duller.</p>
+          <div class="pill-row sm">
+            <span class="pill">Unreal Engine</span>
+            <span class="pill">C++ / Blueprint</span>
+          </div>
+          <div class="project-links">
+            <a href="https://store.steampowered.com/app/3744840/Monochromality/" target="_blank" rel="noopener">Steam ↗</a>
           </div>
         </div>
 
@@ -163,42 +226,112 @@
   <section id="experience" class="section-base">
     <div class="inner">
       <h2>Experience</h2>
-      <p class="section-sub">[Roles, projects, and responsibilities worth naming.]</p>
+      <p class="section-sub">Independent initiatives — no formal employment, no pretence otherwise.</p>
       <div class="timeline">
 
+        <!-- PsyPunker -->
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-body">
             <div class="tl-header">
-              <h3>[Role / Title]</h3>
-              <span class="tl-date">[Year] — Present</span>
+              <h3>Founder &amp; Lead Developer</h3>
+              <span class="tl-date">2026 — Present</span>
             </div>
-            <p class="tl-org">[Organisation or Project]</p>
-            <p class="muted">[What you built, led, or achieved here. Concrete over vague.]</p>
+            <p class="tl-org">PsyPunker</p>
+            <p class="muted">Sole architect and developer of a USB-bound cryptographic Kernel execution platform. Designed the full system architecture — signing pipeline, sandbox model, drive-identity binding — and built the TypeScript monorepo from scratch using pnpm and Turborepo.</p>
           </div>
         </div>
 
+        <!-- EveryMotion -->
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-body">
             <div class="tl-header">
-              <h3>[Role / Title]</h3>
-              <span class="tl-date">[Year] — [Year]</span>
+              <h3>CEO, Owner &amp; Lead Developer</h3>
+              <span class="tl-date">2025 — Present (paused)</span>
             </div>
-            <p class="tl-org">[Organisation or Project]</p>
-            <p class="muted">[What you built, led, or achieved here. Concrete over vague.]</p>
+            <p class="tl-org">EveryMotion</p>
+            <p class="muted">Founded and led an AI-powered motion tracking startup concept targeting AR/VR. Defined the technical vision (computer vision, RAG-enhanced prediction), built the public-facing web presence, and managed the early team and product roadmap.</p>
           </div>
         </div>
 
+        <!-- KronStudios-Games -->
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-body">
             <div class="tl-header">
-              <h3>[Role / Title]</h3>
-              <span class="tl-date">[Year] — [Year]</span>
+              <h3>Project Director &amp; Worldbuilding / Narrative Lead</h3>
+              <span class="tl-date">2025 — Present</span>
             </div>
-            <p class="tl-org">[Organisation or Project]</p>
-            <p class="muted">[What you built, led, or achieved here. Concrete over vague.]</p>
+            <p class="tl-org">KronStudios-Games — Above The Line</p>
+            <p class="muted">Co-founded and co-lead a community-driven game studio producing Above The Line, a post-apocalyptic narrative survival RPG. Responsible for overall project direction, narrative design, lore architecture, and team coordination. Established structured phase-based development, GitHub workflow, and a full Quartz-based GDD wiki.</p>
+          </div>
+        </div>
+
+        <!-- Monochromality -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <h3>Logistics &amp; Suggestions Manager · Lore Writer · Gameplay Overseer · Translator</h3>
+              <span class="tl-date">April 2025 — November 2025</span>
+            </div>
+            <p class="tl-org">Null Concept — Monochromality</p>
+            <p class="muted">Joined in the game's early development stages and accelerated its direction by introducing Backrooms lore frameworks drawn from deep study of the Backrooms Wikidot canon. Took on a broad cross-functional role spanning logistics, team coordination, lore writing, gameplay oversight, partial voice acting, and translation. Stepped back due to sustained deadline failures and diverging creative vision within the team.</p>
+          </div>
+        </div>
+
+        <!-- SCP RP -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <h3>Co-Founder &amp; Lead Manager</h3>
+              <span class="tl-date">Aug 2023 — Feb 2024</span>
+            </div>
+            <p class="tl-org">REIU-V — SCP Roleplay Server</p>
+            <p class="muted">Founded and personally maintained an SCP-themed roleplay Discord community that grew to ~150 members during my tenure and continued accelerating to 900+ after departure. Managed server infrastructure, community moderation, and narrative frameworks. Left following ideological divergence with the other lead members — a clean exit that preserved both community health and personal integrity.</p>
+          </div>
+        </div>
+
+        <!-- Writing — offset entry -->
+        <div class="tl-item tl-writing">
+          <div class="tl-dot tl-dot-writing"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <h3>Writer</h3>
+              <span class="tl-date tl-date-writing">~2023 — Present</span>
+            </div>
+            <p class="tl-org tl-org-writing">Independent · Backrooms Wikidot · REIU-V · Personal</p>
+            <p class="muted">Writing has run as a parallel thread across almost every initiative. The first serious application was the REIU-V community: founding the server demanded already-established lore fluency, and the community's longevity owed a significant part to original in-universe documents written in clinical SCP format — technical protocols, anomalous research logs, consciousness-overwriting procedures — work that required both narrative precision and systemic world-coherence.<br><br>
+            Active on the Backrooms Wikidot Feb–Aug 2025: published articles, collaborative pieces, and contest submissions including the <em>Despair Writings</em> contest. Most prominent published work: <a href="https://backrooms-wiki.wikidot.com/level-360" target="_blank" rel="noopener" class="tl-link">Level 360 ↗</a>.<br><br>
+            From late 2025: a shift into novel and screenplay writing. <em>A Sound Sinner</em> — a Tarantino-structured post-apocalyptic screenplay following a mute gunslinger across a prion-ravaged America. <em>Information Paradox</em> — literary fiction, quieter register. Running concurrently: the Above The Line prologue and story summary, the narrative foundation before a single line of code existed.</p>
+          </div>
+        </div>
+
+        <!-- Subject To F.U.N -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <h3>Founder &amp; Project Manager</h3>
+              <span class="tl-date">~2023 — Never shipped</span>
+            </div>
+            <p class="tl-org">Subject To F.U.N (Fourth-Wall Understanding Network)</p>
+            <p class="muted">A second KronStudios concept developed in parallel with T||RUTHLESS — a fourth-wall-breaking action puzzle thriller in the vein of Portal and The Stanley Parable. The title itself was a sarcastic joke built into the premise: a test-subject game where the game would actively fight the player, override controls, and mock failure in real time. Never reached a single line of production code. Revision 0.01 is the entire paper trail it left behind.</p>
+          </div>
+        </div>
+
+        <!-- T||RUTHLESS -->
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <div class="tl-header">
+              <h3>Founder &amp; Lead</h3>
+              <span class="tl-date">~2022 — ~2023</span>
+            </div>
+            <p class="tl-org">T||RUTHLESS — First KronStudios Initiative</p>
+            <p class="muted">Founded and directed the first KronStudios initiative: a narrative-driven UE5 shooter built around a semi-free-choice storyline system. The title was a deliberate dual-read — <em>Ruthless</em> on first glance, <em>Truthless</em> on closer inspection — embedded into the story itself: a soldier named Rad Bronx, brainwashed and weaponised by the very regime he serves, slowly uncovering the truth about his identity, his father's disappearance, and a century-old government conspiracy through a covert intelligence unit called I.R.I.S. Served as Project Manager and Head UE5 Developer across a team of ~15, producing a full GDD (Rev. 0.15) and a chapter-by-chapter storyline addendum. The project burned out before a playable build. The foundational lesson in community-led development — and the one that shaped everything after.</p>
           </div>
         </div>
 
@@ -208,7 +341,7 @@
 
   <!-- QUOTE / BREAK -->
   <div class="vision-break">
-    <p>"[A line that captures how you think about your work.]"</p>
+    <p>"Everything I make is an argument that these things belong together."</p>
     <p class="vision-attr">— Andrew Pie</p>
   </div>
 
@@ -216,11 +349,11 @@
   <section id="contact" class="section-alt">
     <div class="inner" style="text-align:center">
       <h2>Get in Touch</h2>
-      <p class="section-sub">[Open to opportunities, collaborations, and conversations.]</p>
+      <p class="section-sub">Open to freelance, internships, and collaborations.</p>
       <div class="contact-links">
-        <a href="mailto:[email]" class="contact-chip">✉ [email]</a>
+        <a href="mailto:kronthedev@gmail.com" class="contact-chip">✉ kronthedev@gmail.com</a>
         <a href="https://github.com/KronTheDev" class="contact-chip" target="_blank" rel="noopener">⌥ GitHub</a>
-        <a href="#" class="contact-chip">[LinkedIn / other]</a>
+        <span class="contact-chip contact-chip-static">◈ @kronbrosgames</span>
       </div>
     </div>
   </section>

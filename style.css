@@ -152,12 +152,7 @@ p { line-height: 1.65; }
   font-weight: 300;
 }
 @keyframes blink { 50% { opacity: 0; } }
-.hero-tagline {
-  color: #777;
-  font-size: 0.95rem;
-  max-width: 480px;
-  line-height: 1.6;
-}
+.hero-tagline-removed { display: none; }
 .hero-cta {
   display: flex;
   gap: 0.75rem;
@@ -460,6 +455,96 @@ footer {
 }
 .switch input:checked + .slider { background: #6675ff; }
 .switch input:checked + .slider::after { transform: translateX(20px); }
+
+/* ── Profile image ── */
+.profile-img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(102, 117, 255, 0.3);
+  display: block;
+}
+
+/* ── Bio text ── */
+.bio-hey {
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  color: #6675ff;
+  letter-spacing: 1px;
+}
+.bio-p1 { font-size: 0.9rem; line-height: 1.8; }
+.bio-p2 { font-size: 0.88rem; line-height: 1.8; margin-top: 1rem; }
+
+/* ── Glitch name ── */
+#glitchName {
+  color: #9aa0ff;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+@keyframes glitch-clip {
+  0%   { clip-path: inset(0 0 90% 0); transform: translate(-2px, 0); }
+  25%  { clip-path: inset(60% 0 10% 0); transform: translate(2px, 0); }
+  50%  { clip-path: inset(30% 0 50% 0); transform: translate(-1px, 0); }
+  75%  { clip-path: inset(80% 0 5% 0);  transform: translate(1px, 0); }
+  100% { clip-path: inset(0);           transform: none; }
+}
+#glitchName.glitching {
+  animation: glitch-clip 0.12s steps(1) forwards;
+  color: #fff;
+}
+
+/* ── Status badge variants ── */
+.status-badge.paused {
+  background: rgba(255, 180, 60, 0.12);
+  color: #f0a840;
+}
+
+/* ── Writing timeline entry (parallel thread) ── */
+.tl-item.tl-writing {
+  margin-left: 1.25rem;
+  opacity: 0.88;
+}
+.tl-dot.tl-dot-writing {
+  background: #555;
+  box-shadow: 0 0 0 3px rgba(150, 150, 150, 0.15);
+}
+.tl-date.tl-date-writing { color: #666; }
+.tl-org.tl-org-writing { color: #555; }
+.tl-item.tl-writing .tl-body {
+  border-left: 1px dashed rgba(255,255,255,0.07);
+  padding-left: 1rem;
+}
+.tl-link {
+  color: #6675ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.tl-link:hover { opacity: 0.7; }
+
+/* ── Hero tagline (below CTA) ── */
+.hero-tagline {
+  color: #555;
+  font-size: 0.82rem;
+  font-style: italic;
+  max-width: 420px;
+  line-height: 1.6;
+  margin-top: 0.25rem;
+  letter-spacing: 0.2px;
+}
+
+/* ── Contact static chip ── */
+.contact-chip-static {
+  cursor: default;
+  color: #777;
+  border-color: rgba(255,255,255,0.07);
+}
+.contact-chip-static:hover {
+  transform: none;
+  border-color: rgba(255,255,255,0.07);
+  color: #777;
+}
 
 /* ── Responsive ── */
 @media (max-width: 860px) {

@@ -25,9 +25,9 @@ document.addEventListener('mousemove', e => {
   const dx = e.clientX - lastX, dy = e.clientY - lastY;
   const speed = Math.sqrt(dx * dx + dy * dy);
   lastX = e.clientX; lastY = e.clientY;
-  maxTrail = Math.min(45, 15 + speed * 0.7);
-  const decay = 0.14 + speed / 600;
-  for (let i = 0; i < 2; i++) {
+  maxTrail = Math.min(120, 50 + speed * 1.4);
+  const decay = 0.06 + speed / 900;
+  for (let i = 0; i < 3; i++) {
     trail.push({ x: e.clientX, y: e.clientY, alpha: 1, decay });
   }
   if (trail.length > maxTrail) trail.splice(0, trail.length - maxTrail);
@@ -40,7 +40,7 @@ function animateTrail() {
   ctx.lineJoin = 'round';
   for (let i = 0; i < trail.length - 1; i++) {
     const p1 = trail[i], p2 = trail[i + 1];
-    ctx.strokeStyle = `rgba(102,117,255,${Math.max(0, p1.alpha - 0.2)})`;
+    ctx.strokeStyle = `rgba(48,168,255,${Math.max(0, p1.alpha - 0.15)})`;
     ctx.beginPath();
     ctx.moveTo(p1.x, p1.y);
     ctx.lineTo(p2.x, p2.y);
@@ -95,7 +95,7 @@ if (!isMobile()) {
 
 // ── Role typewriter ──
 const roleEl = document.getElementById('roleType');
-const roles  = ['Developer', 'Systems Engineer', 'Creator', 'Lore Architect'];
+const roles  = ['Developer', 'Systems Engineer', 'Game Designer', 'Lore Architect', 'Scriptwriter'];
 let roleIdx  = 0;
 
 function typeText(text) {
@@ -129,6 +129,29 @@ async function loopRoles() {
 }
 
 if (roleEl) loopRoles();
+
+
+// ── Glitch name (About bio) ──
+const glitchEl = document.getElementById('glitchName');
+const nameA = 'Andrew';
+const nameB = 'Andriyan';
+
+async function glitchName() {
+  while (true) {
+    await new Promise(r => setTimeout(r, 4000 + Math.random() * 3000));
+    glitchEl.classList.add('glitching');
+    await new Promise(r => setTimeout(r, 120));
+    glitchEl.classList.remove('glitching');
+    glitchEl.textContent = nameB;
+    await new Promise(r => setTimeout(r, 900 + Math.random() * 700));
+    glitchEl.classList.add('glitching');
+    await new Promise(r => setTimeout(r, 120));
+    glitchEl.classList.remove('glitching');
+    glitchEl.textContent = nameA;
+  }
+}
+
+if (glitchEl) glitchName();
 
 
 // ── Smooth nav scroll ──

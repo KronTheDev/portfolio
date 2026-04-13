@@ -134,16 +134,16 @@ if (roleEl) loopRoles();
 // ── Glitch name (About bio) ──
 const glitchEl = document.getElementById('glitchName');
 const nameA = 'Andrew';
-const nameB = 'Andriyan';
+const nameB = 'Kron';
 
 async function glitchName() {
   while (true) {
-    await new Promise(r => setTimeout(r, 4000 + Math.random() * 3000));
+    await new Promise(r => setTimeout(r, 1000));
     glitchEl.classList.add('glitching');
     await new Promise(r => setTimeout(r, 120));
     glitchEl.classList.remove('glitching');
     glitchEl.textContent = nameB;
-    await new Promise(r => setTimeout(r, 900 + Math.random() * 700));
+    await new Promise(r => setTimeout(r, 1000));
     glitchEl.classList.add('glitching');
     await new Promise(r => setTimeout(r, 120));
     glitchEl.classList.remove('glitching');

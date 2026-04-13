@@ -10,7 +10,7 @@ const TRANSLATIONS = {
     hero_tagline: "The future won't come for us. Never. Yet we must strive towards it. Always.",
 
     about_heading: 'About Me',
-    bio_hey: '"Hey."',
+    bio_hey: '"Hey,"',
     bio_p1_l1: 'You\'ve seen that opener before. So let\'s get to it: I\'m <span id="glitchName">Andrew</span> — and I build things that probably shouldn\'t belong in the same portfolio.',
     bio_p1_l2: 'Code, systems, worlds, and the words that hold them together.',
     bio_p1_l3: 'I\'m Ukrainian and French, fluent across four languages — and passable in a fifth, <em>though I wouldn\'t recommend it.</em> Somewhere between the text editor and the worlds that don\'t exist yet, that tends to show up in the work.',
@@ -64,7 +64,7 @@ const TRANSLATIONS = {
     hero_tagline: "L'avenir ne viendra pas à nous. Jamais. Et pourtant, nous devons tendre vers lui. Toujours.",
 
     about_heading: 'À Propos',
-    bio_hey: '"Hey."',
+    bio_hey: '"Hey,"',
     bio_p1_l1: 'Vous avez déjà vu ce genre d\'entrée en matière. Alors, allons-y : je suis <span id="glitchName">Andrew</span> — et je construis des choses qui n\'auraient probablement pas leur place dans le même portfolio.',
     bio_p1_l2: 'Du code, des systèmes, des mondes, et les mots qui les tiennent ensemble.',
     bio_p1_l3: 'Je suis ukrainien et français, à l\'aise en quatre langues — et passable dans une cinquième, <em>bien que je ne vous le recommande pas.</em> Quelque part entre l\'éditeur de texte et les mondes qui n\'existent pas encore, ça se retrouve dans le travail.',
@@ -118,7 +118,7 @@ const TRANSLATIONS = {
     hero_tagline: 'Майбутнє не прийде до нас само. Ніколи. І все ж ми маємо прагнути до нього. Завжди.',
 
     about_heading: 'Про мене',
-    bio_hey: '"Гей."',
+    bio_hey: '"Hey,"',
     bio_p1_l1: 'Ви вже бачили таке починання. Тож до діла: я <span id="glitchName">Andrew</span> — і я будую речі, яким, мабуть, не місце в одному портфоліо.',
     bio_p1_l2: 'Код, системи, світи та слова, які тримають їх разом.',
     bio_p1_l3: 'Я українець і француз, вільно говорю чотирма мовами — і більш-менш п\'ятою, <em>хоча не рекомендую.</em> Десь між текстовим редактором і світами, яких ще не існує, це проявляється в роботі.',

@@ -469,9 +469,10 @@ footer {
 /* ── Bio text ── */
 .bio-hey {
   font-family: 'VT323', monospace;
-  font-size: 1.2rem;
+  font-size: 3rem;
   color: #6675ff;
   letter-spacing: 1px;
+  line-height: 1.1;
 }
 .bio-p1 { font-size: 0.9rem; line-height: 1.8; }
 .bio-p2 { font-size: 0.88rem; line-height: 1.8; margin-top: 1rem; }

@@ -547,6 +547,62 @@ footer {
   color: #777;
 }
 
+/* ── Language selector ── */
+.lang-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+.lang-btn {
+  font-family: 'VT323', monospace;
+  font-size: 1rem;
+  letter-spacing: 2.5px;
+  color: rgba(102, 117, 255, 0.28);
+  background: none;
+  border: 1px solid rgba(102, 117, 255, 0.12);
+  padding: 3px 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.18s, border-color 0.18s, background 0.18s, box-shadow 0.18s;
+}
+.lang-btn:hover {
+  color: rgba(102, 117, 255, 0.65);
+  border-color: rgba(102, 117, 255, 0.3);
+}
+.lang-btn.active {
+  color: #9aa0ff;
+  border-color: rgba(102, 117, 255, 0.45);
+  background: rgba(102, 117, 255, 0.07);
+  box-shadow: 0 0 8px rgba(102, 117, 255, 0.12);
+}
+
+/* ── Cyberpunk glitch overlay ── */
+#glitchOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+}
+#glitchOverlay.active {
+  animation: lang-glitch 0.55s steps(1) forwards;
+}
+@keyframes lang-glitch {
+  0%   { opacity: 0;    background: transparent;              clip-path: inset(0 0 100% 0); transform: none; }
+  7%   { opacity: 0.75; background: rgba(102,117,255,0.18);   clip-path: inset(0 0 72% 0);  transform: translateX(-4px); }
+  14%  { opacity: 0.6;  background: rgba(0,255,255,0.1);      clip-path: inset(38% 0 28% 0); transform: translateX(5px); }
+  21%  { opacity: 0.85; background: rgba(255,0,255,0.08);     clip-path: inset(65% 0 8% 0);  transform: translateX(-3px); }
+  28%  { opacity: 0.5;  background: rgba(102,117,255,0.14);   clip-path: inset(12% 0 55% 0); transform: translateX(3px); }
+  35%  { opacity: 1;    background: rgba(10,10,10,0.93);      clip-path: inset(0);           transform: translateX(0); }
+  42%  { opacity: 0.9;  background: rgba(102,117,255,0.2);    clip-path: inset(78% 0 0 0);   transform: translateX(-4px); }
+  49%  { opacity: 0.6;  background: rgba(0,255,255,0.07);     clip-path: inset(0 0 58% 0);   transform: translateX(3px); }
+  56%  { opacity: 0.35; background: rgba(255,0,255,0.05);     clip-path: inset(42% 0 35% 0); transform: translateX(-2px); }
+  63%  { opacity: 0.18; background: rgba(102,117,255,0.08);   clip-path: inset(0);           transform: translateX(1px); }
+  72%  { opacity: 0.07; clip-path: inset(0); transform: none; }
+  100% { opacity: 0;    clip-path: inset(0); transform: none; }
+}
+
 /* ── Nav right group + hamburger ── */
 .nav-right {
   display: flex;

@@ -95,7 +95,7 @@ if (!isMobile()) {
 
 // ── Role typewriter ──
 const roleEl = document.getElementById('roleType');
-const roles  = ['Developer', 'Systems Engineer', 'Game Designer', 'Lore Architect', 'Scriptwriter'];
+let roles    = TRANSLATIONS['en'].roles;
 let roleIdx  = 0;
 
 function typeText(text) {
@@ -132,18 +132,20 @@ if (roleEl) loopRoles();
 
 
 // ── Glitch name (About bio) ──
-const glitchEl = document.getElementById('glitchName');
-const nameA = 'Andrew';
-const nameB = 'Kron';
+let glitchEl = document.getElementById('glitchName');
+const nameA  = 'Andrew';
+const nameB  = 'Kron';
 
 async function glitchName() {
   while (true) {
     await new Promise(r => setTimeout(r, 2500));
+    if (!glitchEl) continue;
     glitchEl.classList.add('glitching');
     await new Promise(r => setTimeout(r, 120));
     glitchEl.classList.remove('glitching');
     glitchEl.textContent = nameB;
     await new Promise(r => setTimeout(r, 2500));
+    if (!glitchEl) continue;
     glitchEl.classList.add('glitching');
     await new Promise(r => setTimeout(r, 120));
     glitchEl.classList.remove('glitching');
@@ -173,15 +175,12 @@ if (glitchEl) glitchName();
     hamburger.setAttribute('aria-expanded', String(open));
   });
 
-  // Close on any nav link click
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
-  // Close on outside click
   document.addEventListener('click', e => {
     if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) closeMenu();
   });
 
-  // Close on Escape
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 })();
 
@@ -195,3 +194,77 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
+
+// ── Language switching ──
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function applyTranslation(lang) {
+  const t = TRANSLATIONS[lang];
+  if (!t) return;
+
+  // Plain text nodes
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+
+  // HTML nodes
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+
+  // Re-wire glitch element (bio_p1_l1 innerHTML recreates it)
+  glitchEl = document.getElementById('glitchName');
+  if (glitchEl) glitchEl.textContent = nameA;
+
+  // Update roles (loop picks up next cycle)
+  roles    = t.roles;
+  roleIdx  = 0;
+
+  // Update html lang attribute
+  document.documentElement.lang = lang;
+
+  // Update CV button href
+  const cvBtn = document.getElementById('cvDownload');
+  if (cvBtn) cvBtn.href = lang === 'en' ? 'cv.html' : `cv.${lang}.html`;
+}
+
+function updateLangButtons(lang) {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+async function switchLanguage(lang) {
+  if (lang === currentLang) return;
+
+  const overlay = document.getElementById('glitchOverlay');
+  overlay.classList.add('active');
+
+  // Swap content at peak of glitch (~175ms in)
+  await new Promise(r => setTimeout(r, 175));
+  applyTranslation(lang);
+
+  // Let animation finish
+  await new Promise(r => setTimeout(r, 375));
+  overlay.classList.remove('active');
+
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  updateLangButtons(lang);
+}
+
+// Wire lang buttons
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
+});
+
+// Apply saved language on load
+if (currentLang !== 'en') {
+  applyTranslation(currentLang);
+  updateLangButtons(currentLang);
+} else {
+  updateLangButtons('en');
+}

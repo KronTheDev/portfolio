@@ -37,6 +37,14 @@
       color: #555;
     }
     .print-bar-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .lang-switch { display: flex; gap: 0.4rem; }
+    .lang-link {
+      font-size: 0.75rem; letter-spacing: 1px; color: #666; text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 4px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .lang-link:hover { color: #aaa; border-color: rgba(255,255,255,0.2); }
+    .lang-link.active { color: #9aa0ff; border-color: rgba(102,117,255,0.4); }
     .btn-back {
       font-size: 0.82rem;
       color: #888;
@@ -226,6 +234,11 @@
   <div class="print-bar">
     <span class="print-bar-label">CV Preview</span>
     <div class="print-bar-actions">
+      <div class="lang-switch">
+        <a href="cv.html"    class="lang-link active">ENG</a>
+        <a href="cv.fr.html" class="lang-link">FRA</a>
+        <a href="cv.uk.html" class="lang-link">UKR</a>
+      </div>
       <a href="index.html" class="btn-back">← Portfolio</a>
       <button class="btn-print" onclick="window.print()">↓ Save as PDF</button>
     </div>

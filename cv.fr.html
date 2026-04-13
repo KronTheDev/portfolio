@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Andriyan Pyrig (Andrew Pie)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 15px; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0e0e0e; color: #d8d8d8; -webkit-font-smoothing: antialiased; }
+
+    .print-bar {
+      position: fixed; top: 0; left: 0; right: 0; height: 52px;
+      background: rgba(14,14,14,0.94); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; z-index: 100;
+    }
+    .print-bar-label { font-family: 'Orbitron', sans-serif; font-size: 0.75rem; letter-spacing: 2px; color: #555; }
+    .print-bar-actions { display: flex; gap: 0.75rem; align-items: center; }
+    .lang-switch { display: flex; gap: 0.4rem; }
+    .lang-link {
+      font-size: 0.75rem; letter-spacing: 1px; color: #666; text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 4px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .lang-link:hover { color: #aaa; border-color: rgba(255,255,255,0.2); }
+    .lang-link.active { color: #9aa0ff; border-color: rgba(102,117,255,0.4); }
+    .btn-back { font-size: 0.82rem; color: #888; text-decoration: none; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; transition: color 0.15s, border-color 0.15s; }
+    .btn-back:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
+    .btn-print { font-size: 0.82rem; font-weight: 700; color: #fff; background: #6675ff; border: none; padding: 7px 18px; border-radius: 6px; cursor: pointer; transition: opacity 0.15s; }
+    .btn-print:hover { opacity: 0.85; }
+
+    .cv-page { max-width: 780px; margin: 0 auto; padding: 5rem 3rem 4rem; }
+
+    .cv-header { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1.25rem; margin-bottom: 1.5rem; }
+    .cv-name { font-family: 'Orbitron', sans-serif; font-size: 1.9rem; font-weight: 700; color: #fff; letter-spacing: 1px; }
+    .cv-alias { font-size: 0.82rem; color: #666; margin-top: 0.2rem; letter-spacing: 0.5px; }
+    .cv-contact { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin-top: 0.75rem; font-size: 0.8rem; color: #888; }
+    .cv-contact a { color: #8891ff; text-decoration: none; }
+
+    .cv-section { margin-bottom: 1.75rem; }
+    .cv-section-title { font-size: 0.68rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #6675ff; margin-bottom: 0.75rem; padding-bottom: 0.3rem; border-bottom: 1px solid rgba(102,117,255,0.15); }
+
+    .cv-edu-item { margin-bottom: 0.5rem; }
+    .cv-edu-line { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+    .cv-edu-name { font-size: 0.88rem; font-weight: 600; color: #ddd; }
+    .cv-edu-date { font-size: 0.78rem; color: #555; flex-shrink: 0; }
+    .cv-edu-sub { font-size: 0.8rem; color: #666; margin-top: 0.1rem; }
+
+    .cv-exp-item { margin-bottom: 1.1rem; }
+    .cv-exp-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 0.15rem; }
+    .cv-exp-role { font-size: 0.9rem; font-weight: 600; color: #ddd; }
+    .cv-exp-date { font-size: 0.77rem; color: #6675ff; flex-shrink: 0; font-weight: 600; }
+    .cv-exp-org { font-size: 0.78rem; color: #666; margin-bottom: 0.3rem; }
+    .cv-exp-body { font-size: 0.82rem; color: #888; line-height: 1.65; }
+    .cv-exp-item.cv-writing { margin-left: 1rem; padding-left: 0.75rem; border-left: 1px dashed rgba(255,255,255,0.08); opacity: 0.82; }
+    .cv-exp-item.cv-writing .cv-exp-date { color: #555; }
+
+    .cv-skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 2rem; }
+    .cv-skill-row { font-size: 0.82rem; color: #999; }
+    .cv-skill-row strong { color: #bbb; font-weight: 600; }
+
+    .cv-lang-row { display: flex; flex-wrap: wrap; gap: 0.3rem 1.5rem; font-size: 0.82rem; color: #888; }
+    .cv-lang-row span strong { color: #bbb; }
+
+    @media (max-width: 680px) {
+      .cv-page { padding: 4.5rem 1.25rem 3rem; }
+      .cv-name { font-size: 1.4rem; }
+      .cv-skills-grid { grid-template-columns: 1fr; }
+      .cv-exp-header { flex-direction: column; gap: 0.1rem; }
+      .cv-edu-line { flex-direction: column; gap: 0.05rem; }
+      .print-bar { padding: 0 1rem; }
+      .print-bar-label { display: none; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 16mm 18mm; }
+      body { background: #fff !important; color: #1a1a1a !important; font-size: 11pt; }
+      .print-bar { display: none !important; }
+      .cv-page { padding: 0; max-width: 100%; }
+      .cv-name { color: #000 !important; font-size: 22pt; }
+      .cv-alias { color: #555 !important; }
+      .cv-contact { color: #444 !important; }
+      .cv-contact a { color: #3344cc !important; }
+      .cv-header { border-bottom-color: #ccc !important; }
+      .cv-section-title { color: #3344cc !important; border-bottom-color: #ddd !important; }
+      .cv-edu-name { color: #111 !important; }
+      .cv-edu-date { color: #777 !important; }
+      .cv-edu-sub  { color: #666 !important; }
+      .cv-exp-role { color: #111 !important; }
+      .cv-exp-date { color: #3344cc !important; }
+      .cv-exp-org  { color: #666 !important; }
+      .cv-exp-body { color: #444 !important; }
+      .cv-exp-item.cv-writing { border-left-color: #ddd !important; opacity: 1 !important; }
+      .cv-exp-item.cv-writing .cv-exp-date { color: #777 !important; }
+      .cv-skill-row { color: #555 !important; }
+      .cv-skill-row strong { color: #111 !important; }
+      .cv-lang-row { color: #555 !important; }
+      .cv-lang-row span strong { color: #111 !important; }
+      .cv-exp-item { break-inside: avoid; }
+      .cv-section  { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-bar">
+    <span class="print-bar-label">Aperçu CV</span>
+    <div class="print-bar-actions">
+      <div class="lang-switch">
+        <a href="cv.html"    class="lang-link">ENG</a>
+        <a href="cv.fr.html" class="lang-link active">FRA</a>
+        <a href="cv.uk.html" class="lang-link">UKR</a>
+      </div>
+      <a href="index.html" class="btn-back">← Portfolio</a>
+      <button class="btn-print" onclick="window.print()">↓ Enregistrer PDF</button>
+    </div>
+  </div>
+
+  <div class="cv-page">
+
+    <header class="cv-header">
+      <div class="cv-name">Andriyan Pyrig</div>
+      <div class="cv-alias">Andrew Pie · KronTheDev</div>
+      <div class="cv-contact">
+        <a href="mailto:kronthedev@gmail.com">kronthedev@gmail.com</a>
+        <a href="https://github.com/KronTheDev" target="_blank">github.com/KronTheDev</a>
+        <span>Discord : @kronbrosgames</span>
+        <span>France / Ukraine</span>
+      </div>
+    </header>
+
+    <section class="cv-section">
+      <div class="cv-section-title">Formation</div>
+      <div class="cv-edu-item">
+        <div class="cv-edu-line">
+          <span class="cv-edu-name">Lycée Jules Siegfried — Le Havre</span>
+          <span class="cv-edu-date">2023 – 2025</span>
+        </div>
+        <div class="cv-edu-sub">Seconde · Première · Terminale (partiel)</div>
+      </div>
+      <div class="cv-edu-item">
+        <div class="cv-edu-line">
+          <span class="cv-edu-name">Lycée Rosa Luxemburg — Canet-en-Roussillon</span>
+          <span class="cv-edu-date">2025 – 2026</span>
+        </div>
+        <div class="cv-edu-sub">Terminale</div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <div class="cv-section-title">Stage</div>
+      <div class="cv-edu-item">
+        <div class="cv-edu-line">
+          <span class="cv-edu-name">HAROPA Port — Le Havre, Département SI</span>
+          <span class="cv-edu-date">Juin 2024</span>
+        </div>
+        <div class="cv-edu-sub">Stage d'observation au sein du département systèmes d'information de l'une des plus grandes autorités portuaires d'Europe.</div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <div class="cv-section-title">Expérience</div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Fondateur & Développeur Principal</span>
+          <span class="cv-exp-date">2026 — Présent</span>
+        </div>
+        <div class="cv-exp-org">PsyPunker</div>
+        <div class="cv-exp-body">Architecte et développeur unique d'une plateforme d'exécution de Kernels cryptographiques liés à une clé USB. Conception de l'architecture système complète — pipeline de signature, modèle sandbox, liaison à l'identité du support — et construction d'un monorepo TypeScript depuis zéro avec pnpm et Turborepo.</div>
+      </div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">PDG, Fondateur & Développeur Principal</span>
+          <span class="cv-exp-date">2025 — Présent (en pause)</span>
+        </div>
+        <div class="cv-exp-org">EveryMotion</div>
+        <div class="cv-exp-body">Fondateur et directeur d'un concept de startup de suivi de mouvement IA pour la réalité mixte. Définition de la vision technique (vision par ordinateur, prédiction RAG), construction de la présence web publique, et gestion de l'équipe et de la feuille de route produit.</div>
+      </div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Directeur de Projet & Responsable Narratif / Worldbuilding</span>
+          <span class="cv-exp-date">2025 — Présent</span>
+        </div>
+        <div class="cv-exp-org">KronStudios-Games — Above The Line</div>
+        <div class="cv-exp-body">Co-fondateur et co-directeur d'un studio communautaire développant Above The Line, un RPG narratif de survie post-apocalyptique. Responsable de la direction du projet, du design narratif, de l'architecture de lore et de la coordination d'équipe. Mise en place d'un workflow de développement par phases, de conventions GitHub et d'un wiki GDD complet sous Quartz.</div>
+      </div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Responsable Logistique · Auteur de Lore · Superviseur Gameplay · Traducteur</span>
+          <span class="cv-exp-date">Avr 2025 — Nov 2025</span>
+        </div>
+        <div class="cv-exp-org">Null Concept — Monochromality (Steam)</div>
+        <div class="cv-exp-body">Contributeur polyvalent sur un jeu d'horreur sorti commercialement. Introduction de cadres narratifs issus d'une étude approfondie du canon Backrooms Wikidot. Rôles couvrant la logistique, l'écriture de lore, la supervision du gameplay, le doublage partiel et la traduction.</div>
+      </div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Co-Fondateur & Responsable Principal</span>
+          <span class="cv-exp-date">Août 2023 — Fév 2024</span>
+        </div>
+        <div class="cv-exp-org">REIU-V — Serveur Discord SCP Roleplay</div>
+        <div class="cv-exp-body">Fondateur et gestionnaire principal d'une communauté Discord de jeu de rôle SCP ayant atteint ~150 membres pendant ma présence, puis accéléré à 900+ après mon départ. Gestion de l'infrastructure serveur, de la modération et des cadres narratifs.</div>
+      </div>
+
+      <div class="cv-exp-item cv-writing">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Écrivain</span>
+          <span class="cv-exp-date">~2023 — Présent</span>
+        </div>
+        <div class="cv-exp-org">Indépendant · Backrooms Wikidot · REIU-V · Personnel</div>
+        <div class="cv-exp-body">Documents techniques in-universe au format SCP pour la communauté REIU-V. Articles publiés et soumissions aux concours sur le Backrooms Wikidot (dont <em>Despair Writings</em>) ; œuvre la plus notable : Level 360. Scénario et roman : <em>A Sound Sinner</em> (post-apocalyptique), <em>Information Paradox</em> (fiction littéraire). Responsable du prologue et du résumé narratif d'Above The Line.</div>
+      </div>
+
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Fondateur & Directeur</span>
+          <span class="cv-exp-date">~2022 — ~2023</span>
+        </div>
+        <div class="cv-exp-org">T||RUTHLESS & Subject To F.U.N — Premières initiatives KronStudios</div>
+        <div class="cv-exp-body">Fondateur et directeur de deux projets UE5 en tant que chef de projet et développeur principal sur une équipe de ~15 personnes. Production de GDD complets et d'addenda narratifs. Leçon fondamentale en développement communautaire, qui a structuré toutes les initiatives suivantes.</div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <div class="cv-section-title">Compétences Techniques</div>
+      <div class="cv-skills-grid">
+        <div class="cv-skill-row"><strong>Langages :</strong> TypeScript, JavaScript, Python, C++, C#, SQL, HTML/CSS, UE Blueprint</div>
+        <div class="cv-skill-row"><strong>Moteurs / Runtimes :</strong> Unreal Engine, Node.js, llama.cpp, HuggingFace Transformers</div>
+        <div class="cv-skill-row"><strong>Outils :</strong> Git + Git LFS, GitHub Actions, pnpm + Turborepo, Vitest, ESLint, CUDA</div>
+        <div class="cv-skill-row"><strong>Autre :</strong> Obsidian, Lore Forge, Blender (notions), Google Docs (scénarisation)</div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <div class="cv-section-title">Langues</div>
+      <div class="cv-lang-row">
+        <span><strong>Ukrainien</strong> — langue maternelle</span>
+        <span><strong>Français</strong> — courant</span>
+        <span><strong>Anglais</strong> — courant</span>
+        <span><strong>Russe</strong> — passif</span>
+        <span><strong>Espagnol</strong> — intermédiaire</span>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

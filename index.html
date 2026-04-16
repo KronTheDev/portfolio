@@ -118,6 +118,8 @@
           <h3 data-i18n="sg_frameworks">Frameworks / Runtimes</h3>
           <div class="pill-row">
             <span class="pill">Unreal Engine</span>
+            <span class="pill">Tauri</span>
+            <span class="pill">React</span>
             <span class="pill">Node.js</span>
             <span class="pill">HuggingFace Transformers</span>
             <span class="pill">llama.cpp</span>
@@ -160,9 +162,9 @@
         <div class="project-card">
           <div class="project-top">
             <h3>EveryMotion</h3>
-            <span class="status-badge paused" data-i18n="badge_paused">WIP — Paused</span>
+            <span class="status-badge" data-i18n="badge_active">Active — WIP</span>
           </div>
-          <p data-i18n="proj_em_desc">An AI-powered, controller-free motion tracking platform for AR/VR. Removes the barrier between user and virtual world — no sensors, no controllers — using computer vision and RAG-enhanced predictive modelling.</p>
+          <p data-i18n="proj_em_desc">An AI-powered, controller-free motion tracking platform for AR/VR. Removes the barrier between user and virtual world — no sensors, no controllers — using computer vision and RAG-enhanced predictive modelling. Core SDK back in active development.</p>
           <div class="pill-row sm">
             <span class="pill">HTML / CSS / JS</span>
             <span class="pill">Computer Vision</span>
@@ -179,10 +181,12 @@
             <h3>PsyPunker</h3>
             <span class="status-badge" data-i18n="badge_active">Active — WIP</span>
           </div>
-          <p data-i18n="proj_ps_desc">A dual-mode desktop platform for authoring, signing, and executing USB-bound Kernel bundles — sandboxed experiences cryptographically tied to the physical drive. When the drive leaves, the session ends. Zero trace on the host.</p>
+          <p data-i18n="proj_ps_desc">A dual-mode Tauri desktop application — a Builder (React + Monaco editor, compiler pipeline) and a Runner (Rust framing layer, WASM sandbox, fullscreen overlay). Kernels are signed bundles tied to the USB drive that issued them. Drive out, session gone, zero trace.</p>
           <div class="pill-row sm">
             <span class="pill">TypeScript</span>
-            <span class="pill">Node.js</span>
+            <span class="pill">Rust</span>
+            <span class="pill">Tauri</span>
+            <span class="pill">React</span>
             <span class="pill">Ed25519 + Argon2id</span>
             <span class="pill">Turborepo</span>
           </div>
@@ -243,7 +247,7 @@
               <span class="tl-date" data-i18n="exp1_date">2026 — Present</span>
             </div>
             <p class="tl-org" data-i18n="exp1_org">PsyPunker</p>
-            <p class="muted" data-i18n="exp1_desc">Sole architect and developer of a USB-bound cryptographic Kernel execution platform. Designed the full system architecture — signing pipeline, sandbox model, drive-identity binding — and built a TypeScript monorepo from scratch using pnpm and Turborepo.</p>
+            <p class="muted" data-i18n="exp1_desc">Sole architect and developer of a USB-bound cryptographic Kernel execution platform. Designed the full system architecture — signing pipeline, sandbox model, drive-identity binding — and built a TypeScript + Rust monorepo using Tauri, React, pnpm, and Turborepo. M3 (key-pair system + bundle signing) complete; Builder UI in progress.</p>
           </div>
         </div>
 
@@ -252,10 +256,10 @@
           <div class="tl-body">
             <div class="tl-header">
               <h3 data-i18n="exp2_role">CEO, Owner &amp; Lead Developer</h3>
-              <span class="tl-date" data-i18n="exp2_date">2025 — Present (paused)</span>
+              <span class="tl-date" data-i18n="exp2_date">2025 — Present</span>
             </div>
             <p class="tl-org" data-i18n="exp2_org">EveryMotion</p>
-            <p class="muted" data-i18n="exp2_desc">Founded and led an AI-powered motion tracking startup concept targeting AR/VR. Defined the technical vision (computer vision, RAG-enhanced prediction), built the public-facing web presence, and managed the early team and product roadmap.</p>
+            <p class="muted" data-i18n="exp2_desc">Founded and led an AI-powered motion tracking startup concept targeting AR/VR. Defined the technical vision (computer vision, RAG-enhanced prediction), built the public-facing web presence, and managed the early team and product roadmap. Core SDK back in active development as of April 2026.</p>
           </div>
         </div>
 
@@ -371,7 +375,7 @@
     </div>
   </div>
 
-  <script src="translations.js?v=1"></script>
+  <script src="translations.js?v=2"></script>
   <script src="script.js?v=3"></script>
 </body>
 </html>

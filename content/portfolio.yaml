@@ -1,7 +1,7 @@
 # Portfolio content, English. Source of truth for index.html, cv*.html, translations.js.
 # See content/README.md for fields and workflow.
-version: 2
-as_of: 2026-11-07          # v1 = live site 2026-04-30; v2 = newer facts from the identity corpus
+version: 3
+as_of: 2026-11-07          # v3 = rendered to the site via tools/build_site.py          # v1 = live site 2026-04-30; v2 = newer facts from the identity corpus
 
 identity:
   legal_name: Andriyan Pyrig       # CV header only
@@ -36,8 +36,8 @@ about:
     experience.
   tags:
     location: France / Ukraine
-    open_to: [Freelance, Internship, Collaboration]
-    domain: [Web, Game Dev, AI, Backend]
+    open_to: [Freelance, Internship, Collaboration, Sales]
+    domain: [Web, Game Dev, AI, Backend, B2B Sales]
   source: fields.md
 
 skills:
@@ -47,13 +47,36 @@ skills:
     - { language: English, level: fluent }
     - { language: Russian, level: passive }
     - { language: Spanish, level: moderate }
-  programming: [TypeScript, JavaScript, Python, HTML / CSS, C++, C#, SQL, UE Blueprint]
-  frameworks: [Unreal Engine, Tauri, React, Node.js, HuggingFace Transformers, llama.cpp]
-  tools: [Git + Git LFS, GitHub Actions, pnpm + Turborepo, Vitest, ESLint + commitlint, CUDA]
-  other: [Blender (basic), Lore Forge, Obsidian, Google Docs (scriptwriting)]
-  source: fields.md
+  programming: [TypeScript, JavaScript, Python, Rust, HTML / CSS, UE Blueprint, SQL, C++ (familiar), C# (familiar)]
+  frameworks: [Unreal Engine 5, Tauri, React, Node.js, llama.cpp, ratatui]
+  tools: [Git + Git LFS, GitHub Actions, pnpm + Turborepo, Vitest, ESLint + commitlint, Docker Compose]
+  systems: [Linux, Tailscale, Self-hosting (Coolify, Supabase, n8n), Qdrant + SQLite, Arduino / ESP32, 3D printing]
+  other: [Consultative sales, Obsidian + Quartz, Lore Forge, Blender (basic), Scriptwriting (Google Docs)]
+  dropped: [CUDA, HuggingFace Transformers]   # nothing public shows them yet
+  source: [fields.md, content/fields.md backcheck]
 
 projects:
+  # render order: PsyPunker, Lodge, Expo, Above The Line, Monochromality, EveryMotion
+  - name: Lodge
+    status: Active — WIP
+    description: >-
+      Language-agnostic installer runtime with a conversational terminal interface: manifest-driven
+      per-OS file placement, cabin-themed terminal UI, bundled offline model for plain-English
+      commands. 5 crates, 172 tests, Apache-2.0.
+    stack: [Rust, ratatui, llama.cpp]
+    links: { github: https://github.com/KronTheDev/lodge }
+    source: KronTheDev/lodge README
+
+  - name: Expo
+    status: Active — WIP
+    description: >-
+      Local-first, voice-first personal AI on my own hardware: always-on low-power server for local
+      LLM triage, intent routing, live lookups and RAG memory; GPU rig for heavy inference.
+      Architecture only on the public site; repo private, no link.
+    stack: [Python, llama.cpp, Qdrant, Docker Compose, Tailscale]
+    links: {}
+    source: [f0276, f0277, f0283, doorman-protocol]
+
   - name: EveryMotion
     status: Closed
     description: >-
@@ -230,7 +253,7 @@ experience:
 vision_quote: "Everything I make is an argument that these things belong together."
 
 contact:
-  subtitle: "Open to freelance, internships, and collaborations."
+  subtitle: "Open to freelance, internships, collaborations and sales work."
   email: kronthedev@gmail.com
   github: https://github.com/KronTheDev
   discord: "@kronbrosgames"

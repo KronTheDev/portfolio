@@ -20,7 +20,7 @@ python -m http.server 8080
 npx serve .
 ```
 
-No lint or test commands. Skills, Projects, Experience, their FR/UK translations and the bodies of `cv.html`, `cv.fr.html`, `cv.uk.html` are generated: edit `tools/content_strings.py` (and the order/links lists in `tools/build_site.py`), then run `python3 tools/build_site.py`. Never hand-edit those generated sections. Nav, hero, about and contact are hand-written in `index.html` + `translations.js`.
+No lint or test commands. All text lives in `tools/locales/{en,fr,uk}.py` (`STRINGS` = every page string, `CV` = CV labels and rows; all three must have the same keys, the build refuses a mismatch). FR and UK are written natively, not translated word for word: keep them that way when editing. Run `python3 tools/build_site.py` to regenerate `translations.js` (whole file), the Skills/Projects/Experience sections of `index.html`, and the print bar + body of `cv.html`, `cv.fr.html`, `cv.uk.html`. Never hand-edit generated output. Section order, stack pills and links are in `tools/build_site.py`; nav, hero, about and contact markup is hand-written in `index.html` (its text still comes from the locales).
 
 ## Architecture
 
@@ -42,9 +42,9 @@ Single-page layout (`index.html`) with one stylesheet (`style.css`) and one scri
 
 1. **Canvas trail** — purple `rgba(102,117,255,...)` trail on `mousemove`. Disabled entirely on mobile (`isMobile()`). Toggle controlled by `#trailWidget` (bottom-left). `TRAIL_ENABLED` flag gates both the RAF loop and new point accumulation.
 
-2. **Role typewriter** — `loopRoles()` async-loops through `TRANSLATIONS[lang].roles`, typing and erasing each entry into `#roleType`. Edit the `roles` arrays in `translations.js`.
+2. **Role typewriter** — `loopRoles()` async-loops through `TRANSLATIONS[lang].roles`, typing and erasing each entry into `#roleType`. Edit the `roles` lists in `tools/locales/*.py`.
 
-4. **Language switch** — `applyTranslation()` fills every `data-i18n` / `data-i18n-html` element from `translations.js` (en / fr / uk) and remembers the choice in `localStorage`.
+4. **Language switch** — `applyTranslation()` fills every `data-i18n` / `data-i18n-html` element from the generated `translations.js` (en / fr / uk) and remembers the choice in `localStorage`.
 
 3. **Smooth scroll** — all `<a href="#...">` links use `scrollIntoView({ behavior: 'smooth' })`. No library needed.
 

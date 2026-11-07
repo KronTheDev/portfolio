@@ -115,8 +115,22 @@ projects:
     source: [fields.md, d011]
 
 experience:
-  subtitle: "Independent initiatives — no formal employment, no pretence otherwise."
+  subtitle: "Independent initiatives and freelance work — no salaried employment, no pretence otherwise."
   entries:
+    - role: Freelance Sales Representative
+      org: Grondia (Swiss campsite-management SaaS)
+      dates: Nov 2026
+      description: >-
+        Prepared and co-led a French-language remote sales call with the founder on 50 minutes'
+        notice, tailoring the pitch to a ~100-pitch Swiss campsite (seasonal contracts, POS, CHF
+        and TWINT payments, Swiss data hosting) and handling questions on pricing, migration and
+        data location; the founder called it "literally perfect." Represented Grondia on its stand
+        at SETT 2026 in Montpellier for a full day, qualifying campsite operators and booking
+        demos. Also advised on pricing-model risks and competitor positioning.
+      tags: [B2B SaaS, sales, French, trade show]
+      quote: { text: "Literally perfect.", by: "Founder, Grondia (on the sales call)" }  # replace with written reference when received
+      source: "Grondia – SETT 2026 portfolio entry (Andrew, 2026-11-07)"
+      as_of: 2026-11-07
     - role: Founder & Lead Developer
       org: PsyPunker
       dates: 2026 — Present
@@ -239,6 +253,12 @@ cv_only:
       dates: June 2023
       detail: Diplôme national du Brevet, Mention Très Bien
       source: d005
+  freelance:
+    - org: Grondia (B2B SaaS, Switzerland)
+      dates: Nov 2026
+      detail: "Freelance Sales Rep: French remote sales call co-led with the founder, plus trade-show stand at SETT 2026."
+      detail_fr: "Commercial indépendant : appel de vente à distance en français aux côtés du fondateur, et animation commerciale du stand au SETT 2026 (Montpellier)."
+      source: "Grondia – SETT 2026 portfolio entry"
   internships:
     - org: HAROPA Port — Le Havre, SI Department
       dates: June 2024

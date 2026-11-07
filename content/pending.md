@@ -30,3 +30,9 @@ Facts from the identity corpus that are not in `portfolio.yaml` yet, because the
 - **p12 PsyPunker link 404s.** => done: no link, presented only
 - **p13 Lodge licence conflict.** => Apache-2.0 (fits its open extension registry and the bundled Apache-2.0 SmolLM2 model); README fixed in the lodge repo
 - **p14 Project order.** Proposed: PsyPunker, Lodge, Expo, Above The Line, Monochromality, then EveryMotion (closed). =>
+
+## Grondia (added 2026-11-07)
+
+- **p15 Sales on the site.** Grondia is your first paid client work and matches your CS-plus-sales goal. Proposed: add "B2B Sales" to the domain tag and "Sales" to Skills > Other (consultative selling, French). =>
+- **p16 Open to.** Proposed: "Freelance · Internship · Collaboration · Sales" =>
+- **p17 Reference quote.** Using the founder's spoken "literally perfect" for now. Proposed: replace with a written line once he sends one. =>

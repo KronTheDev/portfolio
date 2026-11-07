@@ -233,7 +233,19 @@ Evidence after each item. **unproven** = nothing public shows it yet; keep, move
 
 ## Experience
 
-Most recent first. Independent initiatives — no formal employment.
+Most recent first. Independent initiatives and freelance work — no salaried employment.
+
+### Entry 0 — Grondia ＋ *(added 2026-11-07 from your SETT write-up)*
+| Field | Value |
+|---|---|
+| Role / Title | Freelance Sales Representative |
+| Organisation or Project | Grondia (Swiss campsite-management SaaS) |
+| From | 2 Nov 2026 |
+| To | 3 Nov 2026 |
+
+> Prepared and co-led a French-language remote sales call with the founder on 50 minutes' notice, tailoring the pitch to a ~100-pitch Swiss campsite; the founder called it "literally perfect." Represented Grondia on its stand at SETT 2026 (Montpellier), qualifying campsite operators and booking demos. Also advised on pricing-model risks and competitor positioning.
+
+*Kept out of the public repo on purpose: the day rate, contract issues, the prospect's name, the company ID. ? Ask the founder for a one-line written reference to replace the quote.*
 
 ### Entry 1 — Expo ＋ ?
 | Field | Value |
@@ -344,6 +356,10 @@ Most recent first. Independent initiatives — no formal employment.
 **Languages spoken:** UK native · FR fluent · EN fluent · RU ? · ES moderate
 
 **Certifications:** ＋ Ev@Lang English, above B1 · March 2023
+
+**Freelance:** ＋
+> Grondia (B2B SaaS, Switzerland) · Freelance Sales Rep · Nov 2026 — French remote sales call co-led with the founder, plus trade-show stand at SETT 2026.
+> FR: Commercial indépendant, Grondia (SaaS B2B, Suisse), nov. 2026 : appel de vente à distance en français aux côtés du fondateur, et animation commerciale du stand au SETT 2026 (Montpellier).
 
 **Internships:** ✓
 > HAROPA Port, Le Havre · IT department (SI) observation internship · June 2024

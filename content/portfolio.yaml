@@ -76,8 +76,7 @@ projects:
       bundles tied to the USB drive that issued them. Drive out, session gone, zero trace. Phase 1
       shipped as v0.1.0 with 263 tests and CI, release and security workflows.
     stack: [TypeScript, Rust, Tauri, React, Ed25519 + Argon2id, Turborepo]
-    links:
-      github: https://github.com/KronTheDev/psypunker   # repo is private: link 404s for visitors
+    links: {}                        # private repo: present only, no link (Andrew, 2026-11-07)
     source: [fields.md, "psypunker repo: docs/phase2-brief.md (2026-04-27)"]
     as_of: 2026-11-07
 

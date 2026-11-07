@@ -26,7 +26,7 @@ Facts from the identity corpus that are not in `portfolio.yaml` yet, because the
 
 ## Found in the backcheck
 
-- **p11 webdisplay repo is public.** KronTheDev/webdisplay holds the ATL GDD (Lore, Gameplay, Infrastructure), but the sheet says never show it. Proposed: make the repo private. =>
-- **p12 PsyPunker link 404s.** The live card links to a private repo. Proposed: make psypunker public, or drop the link. =>
-- **p13 Lodge licence conflict.** LICENSE is Apache-2.0, README says "All rights reserved". Proposed: pick one before linking it. =>
+- **p11 webdisplay repo is public.** => no action (just a Quartz wrapper for Obsidian)
+- **p12 PsyPunker link 404s.** => done: no link, presented only
+- **p13 Lodge licence conflict.** => Apache-2.0 (fits its open extension registry and the bundled Apache-2.0 SmolLM2 model); README fixed in the lodge repo
 - **p14 Project order.** Proposed: PsyPunker, Lodge, Expo, Above The Line, Monochromality, then EveryMotion (closed). =>

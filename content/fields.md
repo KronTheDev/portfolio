@@ -13,7 +13,7 @@ Street addresses from v1 are removed (the repo is public).
 | 4 | Monochromality levels/entities | 15 levels; Howler, Hounds, Duller | ✓ Matches the official site, which **you built** (KronTheDev/monochromality). Steam page says "10+ levels". | monochromality repo, Steam |
 | 5 | EveryMotion | "Active — WIP (resumed)", SDK back in development | ✎ Shut down. Site repo last updated Nov 2025; `everymotion` SDK repo is empty. | d008, GitHub |
 | 6 | Above The Line | "Active — WIP", C++ / Blueprint | ✎ Paused since summer 2026. UE **5.6**, Blueprint-only since June 2026. Repo last push Jul 2026. | f0022, f0066, f0271, .uproject |
-| 7 | ATL webdisplay | "Private — do not show" | ⚠ The **KronTheDev/webdisplay repo is public** and holds the GDD content (Lore, Gameplay, Infrastructure). Make it private if it should stay hidden. | GitHub |
+| 7 | ATL webdisplay | "Private — do not show" | ✓ Public repo is only a Quartz wrapper for the Obsidian vault; no action. | GitHub |
 | 8 | KronStudios role | "Co-founded and co-lead" | ✎ Co-founder and **President**; ~9 members, VP + HQ Council. | f0287 |
 | 9 | Level 360 | "most prominent published work" | ✓ "Halls of Past Screams", by DR Andrew Pie, rating **+17**, last edited 26 Jun 2026. | backrooms-wiki.wikidot.com/level-360 |
 | 10 | REIU-V | 150 → 900+, Aug 2023–Feb 2024 | ✓ No contradiction; 2025 return confirmed. | f0075, f0076, n2 |
@@ -21,7 +21,7 @@ Street addresses from v1 are removed (the repo is public).
 | 12 | Education | Terminale only | ✎ Now at Université de Montpellier (L1 Informatique, Sept 2026). Lycée split corrected. | f0192, d006 |
 | 13 | Languages | Russian "not preferred" | ? Your reviewed fact says native in Russian too (f0197). Live site shows "passive". | f0197 |
 | 14 | Skills | full list | ? You said the list is inflated (d004). Below, each skill shows the repo that proves it; unproven ones are marked. | repos |
-| 15 | Lodge | not listed | ＋ Public Rust repo, ~19.6k lines, 172 tests, 5 crates. LICENSE file is Apache-2.0 but README says "All rights reserved": pick one. | KronTheDev/lodge |
+| 15 | Lodge | not listed | ＋ Public Rust repo, ~19.6k lines, 172 tests, 5 crates. Licence settled on Apache-2.0 (README fixed). | KronTheDev/lodge |
 | 16 | Expo | not listed | ＋ Private repo `doorman-protocol`, 94 commits, ~7.9k lines Python, 3 services. | doorman-protocol |
 | 17 | Websites | not listed | ＋ You built the EveryMotion, Monochromality and KronStudios sites (HTML/CSS/JS). | repos |
 
@@ -136,7 +136,7 @@ Evidence after each item. **unproven** = nothing public shows it yet; keep, move
 |---|---|
 | Name | PsyPunker |
 | Status | v0.1.0 — Phase 2 planned |
-| GitHub URL | https://github.com/KronTheDev/psypunker *(⚠ repo is **private**: the live card's GitHub link 404s for visitors. Make it public, or drop the link.)* |
+| GitHub URL | *(private — presented without a link)* |
 | Live URL | *(none — desktop application)* |
 
 **Description**:
@@ -185,7 +185,7 @@ Evidence after each item. **unproven** = nothing public shows it yet; keep, move
 | Name | Above The Line |
 | Status | WIP — Paused |
 | GitHub URL | https://github.com/KronStudios-Games/abovetheline ✓ |
-| Live URL | (Private webdisplay — do not show. ⚠ see log #7) |
+| Live URL | (Private webdisplay — do not show) |
 
 **Description**:
 

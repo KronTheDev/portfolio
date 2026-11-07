@@ -1,0 +1,278 @@
+# Portfolio content, English. Source of truth for index.html, cv*.html, translations.js.
+# See content/README.md for fields and workflow.
+version: 2
+as_of: 2026-11-07          # v1 = live site 2026-04-30; v2 = newer facts from the identity corpus
+
+identity:
+  legal_name: Andriyan Pyrig       # CV header only
+  name: Andrew Pie
+  handles: [KronTheDev, kronbrosgames]
+  source: fields.md
+
+hero:
+  eyebrow: "I bid you, Welcome"
+  roles: [Developer, Systems Engineer, Game Designer, Lore Architect, Scriptwriter]
+  tagline: "The future won't come for us. Never. Yet we must strive towards it. Always."
+  source: fields.md
+
+about:
+  opener: '"Hey,"'
+  glitch_name: true                # name glitches between the two identities
+  paragraph_1:
+    - "You've seen that opener before. So let's get to it: I'm Andrew — and I build things that probably shouldn't belong in the same portfolio."
+    - "Code, systems, worlds, and the words that hold them together."
+    - "I'm Ukrainian and French, fluent across four languages — and passable in a fifth, though I wouldn't recommend it. Somewhere between the text editor and the worlds that don't exist yet, that tends to show up in the work."
+    - "This portfolio is the longer version."
+    - "Scroll down to see where that lands."
+  paragraph_2: >-
+    Right now I'm focused on the space where those disciplines actually overlap — where a system
+    needs a story to make sense, or a story needs a system to hold its weight. Most people pick a
+    lane. I've never been particularly good at that. What I'm building toward is work that doesn't
+    need a genre label. Games that read like literature. Narratives that function like
+    architecture. Code that serves something larger than itself, while still having a self. In
+    short, a vague reflection of what I embody. The distinction, if there is one: I don't treat any
+    of these as separate crafts. They inform and interlap each other constantly. Their
+    cross-contamination is usually where the most interesting work comes from, speaking from
+    experience.
+  tags:
+    location: France / Ukraine
+    open_to: [Freelance, Internship, Collaboration]
+    domain: [Web, Game Dev, AI, Backend]
+  source: fields.md
+
+skills:
+  spoken:
+    - { language: Ukrainian, level: native }
+    - { language: French, level: fluent }
+    - { language: English, level: fluent }
+    - { language: Russian, level: passive }
+    - { language: Spanish, level: moderate }
+  programming: [TypeScript, JavaScript, Python, HTML / CSS, C++, C#, SQL, UE Blueprint]
+  frameworks: [Unreal Engine, Tauri, React, Node.js, HuggingFace Transformers, llama.cpp]
+  tools: [Git + Git LFS, GitHub Actions, pnpm + Turborepo, Vitest, ESLint + commitlint, CUDA]
+  other: [Blender (basic), Lore Forge, Obsidian, Google Docs (scriptwriting)]
+  source: fields.md
+
+projects:
+  - name: EveryMotion
+    status: Closed
+    description: >-
+      An AI-powered, controller-free motion tracking platform for AR/VR. Set out to remove the
+      barrier between user and virtual world — no sensors, no controllers — using computer vision
+      and RAG-enhanced predictive modelling. The venture has since shut down; the public site
+      remains.
+    stack: [HTML / CSS / JS, Computer Vision, RAG / AI]
+    links:
+      github: https://github.com/KronTheDev/everymotion.github.io
+      live: https://kronthedev.github.io/everymotion.github.io/
+    source: [fields.md, d008]
+    as_of: 2026-10-17
+
+  - name: PsyPunker
+    status: v0.1.0 — Phase 2 planned
+    description: >-
+      A dual-mode Tauri desktop application — a Builder (React + Monaco editor, compiler pipeline)
+      and a Runner (Rust framing layer, isolated runtime, fullscreen overlay). Kernels are signed
+      bundles tied to the USB drive that issued them. Drive out, session gone, zero trace. Phase 1
+      shipped as v0.1.0 with 263 tests and CI, release and security workflows.
+    stack: [TypeScript, Rust, Tauri, React, Ed25519 + Argon2id, Turborepo]
+    links: {}                        # private repo: present only, no link (Andrew, 2026-11-07)
+    source: [fields.md, "psypunker repo: docs/phase2-brief.md (2026-04-27)"]
+    as_of: 2026-11-07
+
+  - name: Above The Line
+    status: WIP — Paused
+    description: >-
+      A first-person vertical narrative survival game set after the Yellowstone supereruption of
+      Labor Day 2039 reshapes Vancouver's atmosphere. Society splits by elevation, above or below a
+      toxic gas cloud. The player leaves the fragile safety of a high-rise and travels upward.
+      Built in Unreal Engine 5.6 with a (semi-)diegetic UI. Project Director & Narrative Lead
+      under KronStudios-Games.
+    stack: [Unreal Engine 5.6, UE Blueprint, Git LFS, Supabase, Quartz]
+    links:
+      github: https://github.com/KronStudios-Games/abovetheline
+      # webdisplay (Quartz GDD wiki) is private: never link it
+    source: [fields.md, f0022, f0023, f0066, f0269, f0270, f0271, d012]
+    as_of: 2026-10-16
+
+  - name: Monochromality
+    status: Upcoming — Early Access
+    description: >-
+      A Backrooms-inspired first-person horror game by Null Concept, coming to Steam Early Access.
+      15 mapped levels planned at release, each with unique hazards and audio ambiance, alongside
+      three distinct entity types — the Howler, the Hounds, and the Duller. Contributed lore,
+      logistics, gameplay oversight and translation, and built the official website.
+    stack: [Unreal Engine, UE Blueprint, HTML / CSS / JS (site)]
+    links:
+      live: https://kronthedev.github.io/monochromality/
+      steam: https://store.steampowered.com/app/3744840/Monochromality/
+    source: [fields.md, "Steam page 2026-11-07: Early Access, TBA", "KronTheDev/monochromality"]
+    as_of: 2026-11-07
+
+  - name: Primecit Mod
+    show: false                      # Andrew chose to leave it out
+    description: Minecraft mod (MCreator, MC 1.21.4) with the Thphobia dimension and Infinisea biome.
+    source: [fields.md, d011]
+
+experience:
+  subtitle: "Independent initiatives and freelance work — no salaried employment, no pretence otherwise."
+  entries:
+    - role: Freelance Sales Representative
+      org: Grondia (Swiss campsite-management SaaS)
+      dates: Nov 2026
+      description: >-
+        Prepared and co-led a French-language remote sales call with the founder on 50 minutes'
+        notice, tailoring the pitch to a ~100-pitch Swiss campsite (seasonal contracts, POS, CHF
+        and TWINT payments, Swiss data hosting) and handling questions on pricing, migration and
+        data location; the founder called it "literally perfect." Represented Grondia on its stand
+        at SETT 2026 in Montpellier for a full day, qualifying campsite operators and booking
+        demos. Also advised on pricing-model risks and competitor positioning.
+      tags: [B2B SaaS, sales, French, trade show]
+      quote: { text: "Literally perfect.", by: "Founder, Grondia (on the sales call)" }  # replace with written reference when received
+      source: "Grondia – SETT 2026 portfolio entry (Andrew, 2026-11-07)"
+      as_of: 2026-11-07
+    - role: Founder & Lead Developer
+      org: PsyPunker
+      dates: 2026 — Present
+      description: >-
+        Sole architect and developer of a USB-bound cryptographic Kernel execution platform.
+        Designed the full system architecture — signing pipeline, sandbox model, drive-identity
+        binding — and built a TypeScript + Rust monorepo using Tauri, React, pnpm, and Turborepo.
+        Shipped Phase 1 as v0.1.0 (April 2026) with 263 tests and CI, release and security
+        workflows.
+      source: [fields.md, "psypunker repo: docs/phase2-brief.md"]
+
+    - role: CEO, Owner & Lead Developer
+      org: EveryMotion
+      dates: 2025 — 2026
+      description: >-
+        Founded and led an AI-powered motion tracking startup concept targeting AR/VR. Defined the
+        technical vision (computer vision, RAG-enhanced prediction), built the public-facing web
+        presence, and managed the early team and product roadmap before the venture shut down.
+      source: [fields.md, d008]
+
+    - role: Co-Founder & President · Project Director & Narrative Lead
+      org: KronStudios-Games — Above The Line
+      dates: 2025 — Present
+      description: >-
+        Co-founded and lead, as President, a volunteer revenue-share indie studio of about nine
+        people (Vice-President, HQ Council, and Programming, 2D/UI, Animation, Voice, Game Design,
+        Narrative and Level Design departments), producing a narrative survival game in Unreal
+        Engine. Responsible for project direction, narrative design, lore architecture and team
+        coordination. Set up phased milestones, a Task → Branch → PR → Review → Merge workflow,
+        STAR-based recruiting, a merit-weighted revenue-share agreement, and a Quartz-based GDD
+        wiki. Revived the team after a stall in spring 2026.
+      source: [fields.md, f0045, f0074, f0126, f0127, f0287]
+      as_of: 2026-10-16
+
+    - role: Logistics & Suggestions Manager · Lore Writer · Gameplay Overseer · Translator
+      org: Null Concept — Monochromality
+      dates: Apr 2025 — Nov 2025
+      description: >-
+        Cross-functional contributor on an upcoming Backrooms horror game (Steam Early Access). Introduced
+        lore frameworks from deep study of the Backrooms Wikidot canon. Roles spanned logistics,
+        lore writing, gameplay oversight, partial voice acting, and translation. Stepped back due
+        to sustained deadline failures and diverging creative vision. Built the game's official
+        website.
+      source: [fields.md, "Steam page 2026-11-07", "KronTheDev/monochromality"]
+
+    - role: Co-Founder & Lead Manager
+      org: REIU-V — SCP Roleplay Server
+      dates: Aug 2023 — Feb 2024
+      description: >-
+        Founded and maintained an SCP-themed roleplay Discord community that grew to ~150 members
+        during tenure and accelerated to 900+ after departure. Managed server infrastructure,
+        community moderation, and narrative frameworks.
+      source: fields.md
+
+    - role: Writer
+      parallel: true                 # rendered offset from the main timeline
+      org: Independent · Backrooms Wikidot · REIU-V · Personal
+      dates: ~2023 — Present
+      description: >-
+        Writing has run as a parallel thread across almost every initiative. The first serious
+        application was the REIU-V community: original in-universe documents in clinical SCP
+        format — technical protocols, anomalous research logs, consciousness-overwriting
+        procedures, with a new batch written for its commemoration event in late August 2025.
+        Active on the Backrooms Wikidot Feb–Aug 2025: published articles,
+        collaborative pieces, and contest submissions including the Despair Writings contest. Most
+        prominent published work: Level 360 "Halls of Past Screams" (+17). From late 2025: a shift
+        into novel and screenplay writing. A Sound Sinner — a Tarantino-structured post-apocalyptic
+        screenplay, in progress. Information Paradox — literary fiction, quieter register, in
+        progress. Running concurrently: the Above The Line
+        prologue and story summary, the narrative foundation before a single line of code.
+      links:
+        level_360: https://backrooms-wiki.wikidot.com/level-360
+      source: [fields.md, f0175, d013, d014]
+
+    - role: Founder & Project Manager
+      org: Subject To F.U.N (Fourth-Wall Understanding Network)
+      dates: ~2023 — Never shipped
+      description: >-
+        A KronStudios concept — a fourth-wall-breaking action puzzle thriller in the vein of Portal
+        and The Stanley Parable. The title itself was a sarcastic joke built into the premise.
+        Never reached a single line of production code. Revision 0.01 is the entire paper trail it
+        left behind.
+      source: fields.md
+
+    - role: Founder & Lead
+      org: T||RUTHLESS — First KronStudios Initiative
+      dates: ~2022 — ~2023
+      description: >-
+        Founded and directed the first KronStudios initiative: a narrative-driven UE5 shooter with
+        a semi-free-choice storyline. The title — a deliberate dual-read: Ruthless on first glance,
+        Truthless on closer inspection — embedded into the story of a soldier named Rad Bronx,
+        uncovering a century-old government conspiracy through I.R.I.S. Project Manager and Head
+        UE5 Developer across ~15 people. Never reached a playable build. The foundational
+        leadership lesson that shaped everything after.
+      source: fields.md
+
+vision_quote: "Everything I make is an argument that these things belong together."
+
+contact:
+  subtitle: "Open to freelance, internships, and collaborations."
+  email: kronthedev@gmail.com
+  github: https://github.com/KronTheDev
+  discord: "@kronbrosgames"
+
+cv_only:
+  education:
+    - school: Université de Montpellier
+      dates: Sept 2026 – Present
+      detail: Licence Informatique (Computer Science), first year
+      source: [f0057, f0192]
+    - school: Lycée Rosa Luxemburg — Canet-en-Roussillon
+      dates: Jan 2026 – June 2026
+      detail: Terminale, Baccalauréat
+      source: d006
+    - school: Lycée Jules Siegfried — Le Havre
+      dates: 2023 – Dec 2025
+      detail: Seconde · Première · Terminale (first semester)
+      source: d006
+    - school: Collège Belle Etoile — Montivilliers
+      dates: June 2023
+      detail: Diplôme national du Brevet, Mention Très Bien
+      source: d005
+  freelance:
+    - org: Grondia (B2B SaaS, Switzerland)
+      dates: Nov 2026
+      detail: "Freelance Sales Rep: French remote sales call co-led with the founder, plus trade-show stand at SETT 2026."
+      detail_fr: "Commercial indépendant : appel de vente à distance en français aux côtés du fondateur, et animation commerciale du stand au SETT 2026 (Montpellier)."
+      source: "Grondia – SETT 2026 portfolio entry"
+  internships:
+    - org: HAROPA Port — Le Havre, SI Department
+      dates: June 2024
+      detail: >-
+        Observation internship within the information systems department of one of Europe's
+        largest port authorities.
+    - org: La Tôlerie Plastique
+      dates: May 2023
+      detail: 3ème work placement, chosen for a passion for 3D printing.
+      show: false                    # school placement; render only if wanted
+      source: d007
+  certifications:
+    - name: Ev@Lang English test, above B1
+      dates: March 2023
+      show: false
+      source: d005
+  source: fields.md

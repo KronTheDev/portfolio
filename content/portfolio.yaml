@@ -69,15 +69,17 @@ projects:
     as_of: 2026-10-17
 
   - name: PsyPunker
-    status: Active — WIP
+    status: v0.1.0 — Phase 2 planned
     description: >-
       A dual-mode Tauri desktop application — a Builder (React + Monaco editor, compiler pipeline)
-      and a Runner (Rust framing layer, WASM sandbox, fullscreen overlay). Kernels are signed
-      bundles tied to the USB drive that issued them. Drive out, session gone, zero trace.
+      and a Runner (Rust framing layer, isolated runtime, fullscreen overlay). Kernels are signed
+      bundles tied to the USB drive that issued them. Drive out, session gone, zero trace. Phase 1
+      shipped as v0.1.0 with 263 tests and CI, release and security workflows.
     stack: [TypeScript, Rust, Tauri, React, Ed25519 + Argon2id, Turborepo]
     links:
-      github: https://github.com/KronTheDev/psypunker
-    source: fields.md
+      github: https://github.com/KronTheDev/psypunker   # repo is private: link 404s for visitors
+    source: [fields.md, "psypunker repo: docs/phase2-brief.md (2026-04-27)"]
+    as_of: 2026-11-07
 
   - name: Above The Line
     status: WIP — Paused
@@ -95,16 +97,18 @@ projects:
     as_of: 2026-10-16
 
   - name: Monochromality
-    status: Active — WIP
+    status: Upcoming — Early Access
     description: >-
-      A Backrooms-inspired first-person horror game by Null Concept. 15 mapped levels at initial
-      release, each with unique hazards and audio ambiance, alongside three distinct entity types —
-      the Howler, the Hounds, and the Duller.
-    stack: [Unreal Engine, C++ / Blueprint]
+      A Backrooms-inspired first-person horror game by Null Concept, coming to Steam Early Access.
+      15 mapped levels planned at release, each with unique hazards and audio ambiance, alongside
+      three distinct entity types — the Howler, the Hounds, and the Duller. Contributed lore,
+      logistics, gameplay oversight and translation, and built the official website.
+    stack: [Unreal Engine, UE Blueprint, HTML / CSS / JS (site)]
     links:
       live: https://kronthedev.github.io/monochromality/
       steam: https://store.steampowered.com/app/3744840/Monochromality/
-    source: fields.md
+    source: [fields.md, "Steam page 2026-11-07: Early Access, TBA", "KronTheDev/monochromality"]
+    as_of: 2026-11-07
 
   - name: Primecit Mod
     show: false                      # Andrew chose to leave it out
@@ -121,8 +125,9 @@ experience:
         Sole architect and developer of a USB-bound cryptographic Kernel execution platform.
         Designed the full system architecture — signing pipeline, sandbox model, drive-identity
         binding — and built a TypeScript + Rust monorepo using Tauri, React, pnpm, and Turborepo.
-        M3 (key-pair system + bundle signing) complete; Builder UI in progress.
-      source: fields.md
+        Shipped Phase 1 as v0.1.0 (April 2026) with 263 tests and CI, release and security
+        workflows.
+      source: [fields.md, "psypunker repo: docs/phase2-brief.md"]
 
     - role: CEO, Owner & Lead Developer
       org: EveryMotion
@@ -151,11 +156,12 @@ experience:
       org: Null Concept — Monochromality
       dates: Apr 2025 — Nov 2025
       description: >-
-        Cross-functional contributor on a commercially released Backrooms horror game. Introduced
+        Cross-functional contributor on an upcoming Backrooms horror game (Steam Early Access). Introduced
         lore frameworks from deep study of the Backrooms Wikidot canon. Roles spanned logistics,
         lore writing, gameplay oversight, partial voice acting, and translation. Stepped back due
-        to sustained deadline failures and diverging creative vision.
-      source: fields.md
+        to sustained deadline failures and diverging creative vision. Built the game's official
+        website.
+      source: [fields.md, "Steam page 2026-11-07", "KronTheDev/monochromality"]
 
     - role: Co-Founder & Lead Manager
       org: REIU-V — SCP Roleplay Server
@@ -177,9 +183,10 @@ experience:
         procedures, with a new batch written for its commemoration event in late August 2025.
         Active on the Backrooms Wikidot Feb–Aug 2025: published articles,
         collaborative pieces, and contest submissions including the Despair Writings contest. Most
-        prominent published work: Level 360. From late 2025: a shift into novel and screenplay
-        writing. A Sound Sinner — a Tarantino-structured post-apocalyptic screenplay. Information
-        Paradox — literary fiction, quieter register. Running concurrently: the Above The Line
+        prominent published work: Level 360 "Halls of Past Screams" (+17). From late 2025: a shift
+        into novel and screenplay writing. A Sound Sinner — a Tarantino-structured post-apocalyptic
+        screenplay, in progress. Information Paradox — literary fiction, quieter register, in
+        progress. Running concurrently: the Above The Line
         prologue and story summary, the narrative foundation before a single line of code.
       links:
         level_360: https://backrooms-wiki.wikidot.com/level-360

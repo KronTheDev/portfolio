@@ -2,6 +2,8 @@
 
 Single source of truth for everything the portfolio and CV say.
 
+- `fields.md` is the fill-out sheet (v2, backchecked 2026-11-07) with a log of every check.
+- `pending.md` lists the calls only Andrew can make.
 - `portfolio.yaml` holds the English content, section by section, in the order the site shows it.
 - `index.html`, `cv*.html` and `translations.js` render this content. When the content changes here, those files follow.
 - Git history is the version history: every content change is its own commit, so `git log -p content/portfolio.yaml` shows what changed and when.

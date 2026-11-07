@@ -4,7 +4,7 @@ Facts from the identity corpus that are not in `portfolio.yaml` yet, because the
 
 ## Naming and framing
 
-- **p1 PsyPunker → MitoData.** Since April 2026 you present the project as MitoData (from mitosis), with PsyPunker possibly kept as the open-source reduced version (f0048, f0103, f0120, f0288). Proposed: rename the card and experience entry to "MitoData (formerly PsyPunker)", keep the GitHub link. =>
+- **p1 PsyPunker → MitoData.** Resolved by the repo: MitoData is PsyPunker's Phase 4 enterprise tier, not a rename. Proposed: keep PsyPunker, mention MitoData in one line. =>
 - **p2 Russian level.** The site says "passive"; your reviewed fact says native, though you prefer not to use it (f0197). Proposed: keep "passive" or drop the pill entirely. =>
 - **p3 Location tag.** You now live in Montpellier for university. Proposed: keep "France / Ukraine" (no city, for privacy). =>
 - **p4 Experience subtitle.** Still accurate ("no formal employment"). Proposed: keep. =>
@@ -17,9 +17,16 @@ Facts from the identity corpus that are not in `portfolio.yaml` yet, because the
 ## New projects
 
 - **p7 Expo.** Your local-first, voice-first personal AI: always-on "doorman" server (local LLM triage, intent routing, RAG memory, chat UI) plus a GPU rig for heavy inference, all self-hosted (f0276, f0277, f0283). Strongest current technical showcase. The repo is private, so the card would have no GitHub link. Proposed: add as "Active — WIP", described at the architecture level only, nothing personal. =>
-- **p8 Lodge.** Language-agnostic installer runtime with a self-describing JSON manifest, cabin-style terminal UI and a bundled small local model (f0305). Proposed: add only if there is a public repo or demo. =>
-- **p9 Monochromality status.** The card says "Active — WIP" but you stepped back in November 2025 and the game is on Steam. Proposed: badge "Released (Steam)" or "Contributor". =>
+- **p8 Lodge.** Public repo exists (Rust, 5 crates, ~19.6k lines, 172 tests). Proposed: add as a project card and experience entry (text in fields.md). =>
+- **p9 Monochromality status.** Applied: the game is not released (Steam: Early Access, TBA), so "commercially released" was removed and the badge is "Upcoming — Early Access". =>
 
 ## Writing
 
 - **p10 Information Paradox / A Sound Sinner detail.** Both are unfinished (Draft #1 of the screenplay, chapters 1–2 + intro of the novel) (d014, f0309). Proposed: add "in progress" to each, nothing else. =>
+
+## Found in the backcheck
+
+- **p11 webdisplay repo is public.** KronTheDev/webdisplay holds the ATL GDD (Lore, Gameplay, Infrastructure), but the sheet says never show it. Proposed: make the repo private. =>
+- **p12 PsyPunker link 404s.** The live card links to a private repo. Proposed: make psypunker public, or drop the link. =>
+- **p13 Lodge licence conflict.** LICENSE is Apache-2.0, README says "All rights reserved". Proposed: pick one before linking it. =>
+- **p14 Project order.** Proposed: PsyPunker, Lodge, Expo, Above The Line, Monochromality, then EveryMotion (closed). =>

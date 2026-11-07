@@ -101,10 +101,6 @@ const TRANSLATIONS = {
     vision_quote: "\"Everything I make is an argument that these things belong together.\"",
     contact_heading: "Get in Touch",
     contact_sub: "Open to freelance, internships, collaborations and sales work.",
-    contact_sub: "Open to freelance, internships, collaborations and sales work.",
-    contact_sub: "Open to freelance, internships, collaborations and sales work.",
-    contact_sub: "Open to freelance, internships, collaborations and sales work.",
-    contact_sub: "Open to freelance, internships, collaborations and sales work.",
   },
 
   fr: {
@@ -208,10 +204,6 @@ const TRANSLATIONS = {
     vision_quote: "« Tout ce que je fais plaide pour une seule chose : ces disciplines sont faites pour aller ensemble. »",
     contact_heading: "Me contacter",
     contact_sub: "Ouvert au freelance, aux stages, aux collaborations et aux missions commerciales.",
-    contact_sub: "Ouvert au freelance, aux stages, aux collaborations et aux missions commerciales.",
-    contact_sub: "Ouvert au freelance, aux stages, aux collaborations et aux missions commerciales.",
-    contact_sub: "Ouvert au freelance, aux stages, aux collaborations et aux missions commerciales.",
-    contact_sub: "Ouvert au freelance, aux stages, aux collaborations et aux missions commerciales.",
   },
 
   uk: {
@@ -314,10 +306,6 @@ const TRANSLATIONS = {
     exp_tr_desc: "Заснував і керував першою ініціативою KronStudios: наративним шутером на UE5 із системою напіввільного вибору. Назва — навмисне подвійне прочитання: <em>Ruthless</em> на перший погляд, <em>Truthless</em> при уважнішому розгляді — розкрита через історію солдата Рада Бронкса, що викриває вікову урядову змову через підрозділ I.R.I.S. Директор проекту та провідний розробник UE5 у команді ~15 осіб. До робочого прототипу справа не дійшла. Фундаментальний урок, що визначив усе подальше.",
     vision_quote: "«Все, що я роблю — це доказ того, що цим речам місце поруч.»",
     contact_heading: "Зв'язатися",
-    contact_sub: "Відкритий до фрилансу, стажувань, співпраці та роботи в продажах.",
-    contact_sub: "Відкритий до фрилансу, стажувань, співпраці та роботи в продажах.",
-    contact_sub: "Відкритий до фрилансу, стажувань, співпраці та роботи в продажах.",
-    contact_sub: "Відкритий до фрилансу, стажувань, співпраці та роботи в продажах.",
     contact_sub: "Відкритий до фрилансу, стажувань, співпраці та роботи в продажах.",
   },
 };

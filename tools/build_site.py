@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Render content into the static site.
 
-Source of truth: content/portfolio.yaml (EN). Localised strings live in
-tools/content_strings.py. This script rewrites:
+Source of truth: tools/content_strings.py (EN/FR/UK strings, CV rows).
+This script rewrites:
   - translations.js  (skills → contact keys, about tags) for en / fr / uk
   - index.html       (Skills, Projects, Experience sections)
   - cv.html, cv.fr.html, cv.uk.html  (CV body)
@@ -162,10 +162,10 @@ def build_translations():
         for k in ('tag_open', 'tag_domain'):
             block, n = re.subn(rf"{k}: (?:'(?:[^'\\]|\\.)*'|\"(?:[^\"\\]|\\.)*\")", f'{k}: {js(S[l][k])}', block, count=1)
             assert n == 1, (l, k)
-        a = block.index('    skills_heading')
-        m = re.search(r"    contact_heading:.*\n", block)
+        a = block.index('    skills_heading')   # generated keys run to the end of the block
+        end = block.rindex('  },')
         lines = '\n'.join(f'    {k}: {js(S[l][k])},' for k in GEN_KEYS) + '\n'
-        block = block[:a] + lines + block[m.end():]
+        block = block[:a] + lines + block[end:]
         s = s[:st] + block + s[nxt:]
     p.write_text(s, encoding='utf-8')
 

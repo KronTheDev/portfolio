@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Localised site strings generated from content/portfolio.yaml.
+"""Site content: the single source for Skills, Projects, Experience and the CVs.
 
-Edit content/portfolio.yaml first (EN source of truth), then mirror the change here
-for FR and UK, then run:  python3 tools/build_site.py
+Edit the EN string, mirror it in FR and UK, then run:  python3 tools/build_site.py
 """
 
 L360 = '<a href="https://backrooms-wiki.wikidot.com/level-360" target="_blank" rel="noopener" class="tl-link">Level 360 ↗</a>'

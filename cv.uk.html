@@ -125,6 +125,7 @@
 
   <div class="cv-page">
 
+    <!-- HEADER -->
     <header class="cv-header">
       <div class="cv-name">Andriyan Pyrig</div>
       <div class="cv-alias">Andrew Pie · KronTheDev</div>
@@ -140,17 +141,42 @@
       <div class="cv-section-title">Освіта</div>
       <div class="cv-edu-item">
         <div class="cv-edu-line">
-          <span class="cv-edu-name">Lycée Jules Siegfried — Гавр</span>
-          <span class="cv-edu-date">2023 – 2025</span>
+          <span class="cv-edu-name">Université de Montpellier</span>
+          <span class="cv-edu-date">Вер 2026 – дотепер</span>
         </div>
-        <div class="cv-edu-sub">Seconde · Première · Terminale (частково)</div>
+        <div class="cv-edu-sub">Licence Informatique (комп'ютерні науки), перший курс</div>
       </div>
       <div class="cv-edu-item">
         <div class="cv-edu-line">
-          <span class="cv-edu-name">Lycée Rosa Luxemburg — Кане-ан-Руссійон</span>
-          <span class="cv-edu-date">2025 – 2026</span>
+          <span class="cv-edu-name">Lycée Rosa Luxemburg — Canet-en-Roussillon</span>
+          <span class="cv-edu-date">Січ – чер 2026</span>
         </div>
-        <div class="cv-edu-sub">Terminale</div>
+        <div class="cv-edu-sub">Terminale · Baccalauréat</div>
+      </div>
+      <div class="cv-edu-item">
+        <div class="cv-edu-line">
+          <span class="cv-edu-name">Lycée Jules Siegfried — Le Havre</span>
+          <span class="cv-edu-date">2023 – гру 2025</span>
+        </div>
+        <div class="cv-edu-sub">Seconde · Première · Terminale (перший семестр)</div>
+      </div>
+      <div class="cv-edu-item">
+        <div class="cv-edu-line">
+          <span class="cv-edu-name">Collège Belle Etoile — Montivilliers</span>
+          <span class="cv-edu-date">2023</span>
+        </div>
+        <div class="cv-edu-sub">Diplôme national du Brevet, Mention Très Bien (з відзнакою)</div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <div class="cv-section-title">Фриланс</div>
+      <div class="cv-edu-item">
+        <div class="cv-edu-line">
+          <span class="cv-edu-name">Grondia — B2B SaaS, Швейцарія</span>
+          <span class="cv-edu-date">Лис 2026</span>
+        </div>
+        <div class="cv-edu-sub">Фриланс-представник з продажів: дистанційний дзвінок французькою разом із засновником (відгук: «буквально ідеально») і повний день на стенді виставки SETT 2026, Монпельє.</div>
       </div>
     </section>
 
@@ -158,87 +184,97 @@
       <div class="cv-section-title">Стажування</div>
       <div class="cv-edu-item">
         <div class="cv-edu-line">
-          <span class="cv-edu-name">HAROPA Port — Гавр, відділ ІС</span>
-          <span class="cv-edu-date">Червень 2024</span>
+          <span class="cv-edu-name">HAROPA Port — Гавр, ІТ-департамент (SI)</span>
+          <span class="cv-edu-date">Чер 2024</span>
         </div>
-        <div class="cv-edu-sub">Ознайомче стажування у відділі інформаційних систем одного з найбільших портових управлінь Європи.</div>
+        <div class="cv-edu-sub">Ознайомче стажування в департаменті інформаційних систем одного з найбільших портів Європи.</div>
       </div>
     </section>
 
     <section class="cv-section">
       <div class="cv-section-title">Досвід</div>
-
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Творець і системний інженер</span>
+          <span class="cv-exp-date">2026 — Дотепер</span>
+        </div>
+        <div class="cv-exp-org">Expo — інфраструктура персонального ШІ</div>
+        <div class="cv-exp-body">Self-hosted персональний ШІ на двох машинах: завжди ввімкнений сервер (локальний LLM-тріаж, маршрутизація намірів, RAG-пам'ять, чат) і GPU-машина для важкого інференсу. Docker Compose, Tailscale, llama.cpp, Qdrant, SQLite.</div>
+      </div>
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">Творець і провідний розробник</span>
+          <span class="cv-exp-date">Кві 2026 — Дотепер</span>
+        </div>
+        <div class="cv-exp-org">Lodge</div>
+        <div class="cv-exp-body">Рантайм встановлення на Rust з термінальним інтерфейсом природною мовою, вбудованою офлайн-моделлю та правилами розміщення для кожної ОС. 5 crates, 172 тести, Apache-2.0.</div>
+      </div>
       <div class="cv-exp-item">
         <div class="cv-exp-header">
           <span class="cv-exp-role">Засновник і провідний розробник</span>
           <span class="cv-exp-date">2026 — Дотепер</span>
         </div>
         <div class="cv-exp-org">PsyPunker</div>
-        <div class="cv-exp-body">Єдиний архітектор і розробник платформи виконання криптографічних Kernel-бандлів, прив'язаних до USB. Розробив повну системну архітектуру — пайплайн підпису, модель пісочниці, прив'язку до ідентифікатора носія — і побудував TypeScript + Rust монорепо з Tauri, React, pnpm і Turborepo. M3 (система ключів + підпис бандлів) завершено; інтерфейс Builder у процесі.</div>
+        <div class="cv-exp-body">Єдиний архітектор платформи виконання криптографічних Kernel-бандлів, прив'язаних до USB (монорепо Tauri, React, Rust, TypeScript). Фаза 1 випущена як v0.1.0 у квітні 2026, 263 тести, CI, release і security воркфлоу.</div>
       </div>
-
       <div class="cv-exp-item">
         <div class="cv-exp-header">
-          <span class="cv-exp-role">CEO, власник і провідний розробник</span>
-          <span class="cv-exp-date">2025 — Дотепер</span>
-        </div>
-        <div class="cv-exp-org">EveryMotion</div>
-        <div class="cv-exp-body">Заснував і очолив стартап-концепт платформи відстеження руху на базі ШІ для доповненої реальності. Визначив технічне бачення (комп'ютерний зір, RAG-передбачення), створив публічний вебсайт, керував командою та дорожньою картою продукту. Ядро SDK знову в активній розробці з квітня 2026.</div>
-      </div>
-
-      <div class="cv-exp-item">
-        <div class="cv-exp-header">
-          <span class="cv-exp-role">Директор проекту та наративний керівник / Worldbuilding</span>
+          <span class="cv-exp-role">Співзасновник і президент · Директор проекту</span>
           <span class="cv-exp-date">2025 — Дотепер</span>
         </div>
         <div class="cv-exp-org">KronStudios-Games — Above The Line</div>
-        <div class="cv-exp-body">Співзаснував та співкерує спільнотним ігровим студією, що розробляє Above The Line — постапокаліптичну наративну RPG виживання. Відповідальний за керівництво проектом, наративний дизайн, архітектуру лору та координацію команди. Впровадив поетапний робочий процес, конвенції GitHub і GDD-вікі на Quartz.</div>
+        <div class="cv-exp-body">Очолюю волонтерську студію з розподілом доходу (~9 людей), що створює наративну гру на виживання на Unreal Engine 5.6. Напрям проекту, наративний дизайн, PR-воркфлоу, STAR-рекрутинг, розподіл доходу за внеском, GDD-вікі на Quartz.</div>
       </div>
-
       <div class="cv-exp-item">
         <div class="cv-exp-header">
           <span class="cv-exp-role">Менеджер логістики · Автор лору · Наглядач геймплею · Перекладач</span>
           <span class="cv-exp-date">Кві 2025 — Лис 2025</span>
         </div>
-        <div class="cv-exp-org">Null Concept — Monochromality (Steam)</div>
-        <div class="cv-exp-body">Багатофункціональний учасник комерційно випущеної гри жахів у жанрі Backrooms. Впровадив наративні рамки з глибокого вивчення канону Backrooms Wikidot. Ролі: логістика, написання лору, нагляд за геймплеєм, часткове озвучення та переклад.</div>
+        <div class="cv-exp-org">Null Concept — Monochromality (Steam, скоро)</div>
+        <div class="cv-exp-body">Крос-функціональний учасник гри жахів Backrooms, що готується до виходу: лор, логістика, нагляд за геймплеєм, часткове озвучення, переклад; створив офіційний сайт.</div>
       </div>
-
+      <div class="cv-exp-item">
+        <div class="cv-exp-header">
+          <span class="cv-exp-role">CEO, власник і провідний розробник</span>
+          <span class="cv-exp-date">2025 — 2026</span>
+        </div>
+        <div class="cv-exp-org">EveryMotion</div>
+        <div class="cv-exp-body">Заснував стартап-концепт відстеження руху на базі ШІ для AR/VR; технічне бачення та публічний сайт, доки проект не закрився.</div>
+      </div>
       <div class="cv-exp-item">
         <div class="cv-exp-header">
           <span class="cv-exp-role">Співзасновник і провідний менеджер</span>
           <span class="cv-exp-date">Сер 2023 — Лют 2024</span>
         </div>
-        <div class="cv-exp-org">REIU-V — SCP Roleplay Discord сервер</div>
-        <div class="cv-exp-body">Заснував і підтримував Discord-спільноту рольових ігор у стилі SCP, яка виросла до ~150 учасників під час мого перебування і прискорилась до 900+ після відходу. Управляв інфраструктурою сервера, модерацією та наративними рамками.</div>
+        <div class="cv-exp-org">REIU-V — SCP Roleplay Discord-сервер</div>
+        <div class="cv-exp-body">Виростив спільноту SCP-рольових ігор до ~150 учасників (900+ після відходу); інфраструктура, модерація, наративні рамки.</div>
       </div>
-
       <div class="cv-exp-item cv-writing">
         <div class="cv-exp-header">
           <span class="cv-exp-role">Письменник</span>
           <span class="cv-exp-date">~2023 — Дотепер</span>
         </div>
         <div class="cv-exp-org">Незалежно · Backrooms Wikidot · REIU-V · Особисте</div>
-        <div class="cv-exp-body">Технічні документи у форматі SCP для спільноти REIU-V. Публікації та конкурсні роботи на Backrooms Wikidot (зокрема <em>Despair Writings</em>); найпомітніша: Level 360. Сценарій і роман: <em>A Sound Sinner</em> (постапокаліпсис), <em>Information Paradox</em> (літературна проза). Наративний керівник Above The Line з концептуального етапу.</div>
+        <div class="cv-exp-body">Опубліковані статті на Backrooms Wikidot (Level 360, +17) і конкурсні роботи; внутрішньосвітові технічні документи SCP; сценарій і роман у роботі: <em>A Sound Sinner</em>, <em>Information Paradox</em>.</div>
       </div>
-
       <div class="cv-exp-item">
         <div class="cv-exp-header">
           <span class="cv-exp-role">Засновник і керівник</span>
           <span class="cv-exp-date">~2022 — ~2023</span>
         </div>
-        <div class="cv-exp-org">T||RUTHLESS & Subject To F.U.N — Перші ініціативи KronStudios</div>
-        <div class="cv-exp-body">Заснував і керував двома проектами на UE5 як директор і провідний розробник у команді ~15 осіб. Виробництво повних GDD та наративних адендумів. Фундаментальний урок у спільнотній розробці, що визначив усі наступні ініціативи.</div>
+        <div class="cv-exp-org">T||RUTHLESS і Subject To F.U.N — перші ініціативи KronStudios</div>
+        <div class="cv-exp-body">Керував двома проектами ігор на UE5 як менеджер проекту та провідний розробник у команді ~15 осіб; повні GDD і сюжетні додатки. До робочої версії не дійшло — урок лідерства, що визначив усе подальше.</div>
       </div>
     </section>
 
     <section class="cv-section">
       <div class="cv-section-title">Технічні навички</div>
       <div class="cv-skills-grid">
-        <div class="cv-skill-row"><strong>Мови:</strong> TypeScript, JavaScript, Python, C++, C#, SQL, HTML/CSS, UE Blueprint</div>
-        <div class="cv-skill-row"><strong>Рушії / Рантайми:</strong> Unreal Engine, Node.js, llama.cpp, HuggingFace Transformers</div>
-        <div class="cv-skill-row"><strong>Інструменти:</strong> Git + Git LFS, GitHub Actions, pnpm + Turborepo, Vitest, ESLint, CUDA</div>
-        <div class="cv-skill-row"><strong>Інше:</strong> Obsidian, Lore Forge, Blender (базово), Google Docs (сценарування)</div>
+        <div class="cv-skill-row"><strong>Мови:</strong> TypeScript, JavaScript, Python, Rust, HTML/CSS, UE Blueprint, SQL · базово: C++, C#</div>
+        <div class="cv-skill-row"><strong>Рушії / Рантайми:</strong> Unreal Engine 5, Tauri, React, Node.js, llama.cpp, ratatui</div>
+        <div class="cv-skill-row"><strong>Інструменти:</strong> Git + Git LFS, GitHub Actions, pnpm + Turborepo, Vitest, ESLint, Docker Compose</div>
+        <div class="cv-skill-row"><strong>Системи / Залізо:</strong> Linux, Tailscale, self-hosting (Coolify, Supabase, n8n), Qdrant, SQLite, Arduino / ESP32, 3D-друк</div>
+        <div class="cv-skill-row"><strong>Інше:</strong> Консультативні продажі (FR/EN), Obsidian + Quartz, Lore Forge, Blender (базово), Google Docs (сценарування)</div>
       </div>
     </section>
 
@@ -254,5 +290,6 @@
     </section>
 
   </div>
+
 </body>
 </html>

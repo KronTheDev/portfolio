@@ -18,4 +18,5 @@ Single source of truth for everything the portfolio and CV say.
 
 1. Edit `portfolio.yaml` (or let Claude apply new material to it).
 2. Review the diff.
-3. Sync `index.html`, `cv*.html` and `translations.js` (FR/UK) to match.
+3. Mirror the change in `tools/content_strings.py` (EN/FR/UK strings, CV rows) and, for order or links, the structure lists in `tools/build_site.py`.
+4. Run `python3 tools/build_site.py`: it rewrites the Skills, Projects and Experience sections of `index.html`, the matching keys in `translations.js`, and the body of `cv.html`, `cv.fr.html`, `cv.uk.html`. Re-running is safe (same output).
